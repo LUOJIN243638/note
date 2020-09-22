@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+
+  /*$(function(){
+  		//给H1添加一些效果
+  		$("h1").css("backgroundColor","orange")
+  
+  		$("h1").mouseover(function(){
+  		this.style.backgroundColor = "red";
+  		})
+  		$("h1").mouseout(function(){
+  		this.style.backgroundColor = "pink";
+  		})
+  	});*/
+
+
+   //【】如果是多个H1可以通过链式操作对上述操作简化
+   $(function(){
+  		//给H1添加一些效果
+  		$("h1").click(function(){
+  			alert("click!");
+  		})
+  		.css("backgroundColor","orange")
+  		.mouseover(function(){
+  			this.style.backgroundColor = "red";
+  		}).mouseout(function(){
+  			this.style.backgroundColor = "pink";
+  		})
+  	 	});
+
+	</script>
+</head>
+<body>
+	<h1>hello world</h1>
+</body>
+</html>

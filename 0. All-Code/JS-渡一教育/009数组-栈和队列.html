@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*栈：是古代的一种木棚，洗衣机一样
+		栈结构：从一个口进，同一个口出。  【特点】：先进出
+		1，push() 【格式】 数组.push(元素....)；
+		功能：给数组末尾添加元素; 参数：我们要添加的元素，个数随意
+		返回值：添加元素后，数组的长度
+		2.pop() 【格式】 数组.pop()；
+		功能：移除数组中的最后一个元素
+		返回值：移除的元素*/
+		/* var arr=["钢铁侠","yiren","lvjuren"];
+		var res = arr.push("shab","luojin");
+		alert(arr);
+		alert(res); 
+
+		var arr=["钢铁侠","yiren","lvjuren"];
+		var res = arr.pop("lvjuren");
+		alert(arr);
+		alert(res); */
+       
+       /* 对列结构：从一头进去，从另外一头出去。 特点：先进先出。
+       push() 进
+       shift() 出 【格式】：数组.shift();功能：从数组头部取下一个元素，返回值：取下的元素
+	   unshift() 【格式】：数组.unshift()；功能：从数组的头部插入元素；参数：随意；返回值：插入元素以后，数组的长度
+       */
+       /* var arr=["钢铁侠","yiren","lvjuren"];
+		var res = arr.shift(); //“钢铁侠”就没了
+		alert(arr);
+		alert(res); */
+		var arr=["钢铁侠","yiren","lvjuren"];
+		var res = arr.unshift("shab","luojin");
+		alert(arr); //shab,luojin,钢铁侠,yiren,lvjuren
+		alert(res); //5
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

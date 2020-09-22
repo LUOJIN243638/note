@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#div1{width: 100px;height: 100px;background-color: red;border: 1px solid black;}
+	</style>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+		/*   on off方法 传统的事件绑定，事件监听：多次添加后边会覆盖前边，不能指定某一事件某一函数进行删除
+		$().click(function(){ 
+     可以将click换掉 所有的都一样
+     })     */
+   /*  $(function(){
+   		$("#div1").click(function(){alert(1);}) //1
+        $("#div1").click(function(){alert(2);}) //2
+   	}); */
+
+     var i = 0;
+     $(function(){
+         //1, 给div添加点击事件 = 给事件添加一个函数
+        //$("#div1").on("click",function(){alert("hello");})
+         
+         //2,同时给多个事件添加一个函数，多个事件空格隔开 
+         /*$("#div1").on("mouseover",function(){
+            $(this).html(i++);
+         })*/
+
+          //3,给不同事件添加不同函数，
+         $("#div1").on({
+            click: function(){alert("click");},
+            mouseover: function(){$(this).css("background-color","red")},
+            mouseout: function(){$(this).css("background-color","pink")}
+          })
+
+         $("#div1").click(show);
+         function show(){
+            alert("click");
+         }
+
+
+          //4,事件委托：第二个参数是出发对象的选择器
+         /* $("ul").on("click","li",function(){
+            $(this).css("background-color","green") //点击的li变红色
+          })
+
+          var i=6;
+          $("#btn1").click(function(){
+            //新增节点,下边怎么写，这里也怎么写
+            $(`<li>${i++ * 1111}</li>`).appendTo($("ul"));
+          })*/
+
+          //5，取消是事件
+          $("#cancel").click(function(){
+            //$("#div1").off(); //取消所有事件上
+            //$("#div1").off("click");  //取消某一事件的所有函数
+
+            //取消指定某一事件的某一函数？必须知道这个函数的函数名是啥
+            $("#div1").off("click",show)
+
+          })
+      })
+ 
+
+	</script>
+</head>
+<div id="div1"> </div>
+<ul>
+   <li>11111</li>
+   <li class="box">22222</li>
+   <li>33333</li>
+   <li class="box">44444</li>
+   <li>55555</li>
+</ul>
+<button id="btn1">点击按钮增加节点</button>
+<button id="cancel">取消事件</button>
+
+</body>
+</html>

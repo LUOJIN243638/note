@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/json2.js" type="text/javascript">
+			
+		</script>
+	</head>
+	<body>
+		<!-- JSON
+		 对象和JSON: 有前端和服务器，网页在前， 服务器在后，需要交互。
+		 页面 服务器用不同的语言写的，这个对象用JS写的 ，想要发怎么？
+		 JS只能认识自己的对象，想在就需要传给JAVA, 怎么办呢？
+		 
+		 有没有共通得到东西，（数字，布尔值，） '字符串'
+		字符串都认识
+		JSON 就是特殊格式的字符串，可以被任何任意语言认识，并转换为任意语言中的对象
+		主要用于数据的交互
+			- javascript Object Notation JS对象表示法
+			- JSon 和 JS对象表示格式一样，但是JSON中对象的属性名必须加双引号，其他一样
+		JSON 分类：
+			- 1，对象 {}
+			- 2，数组 []
+		 
+		JSON 允许的值：
+			- 字符串
+			- 数值
+			- 布尔值
+			- null
+			- 对象
+			- 数组
+		
+		将JSON字符串转化为JS对象，互相转
+			- JSON工具类 ；JS中提供的工具类
+			
+		json ----> js 对象
+			- JSON.parse() 
+				- 可以将JSON中字符串转化为JS对象
+				- 需要一个字符串作为参数，会将该字符串转为JS对象
+		js对象----> JSON	
+			- JSON.stringify()
+		
+		数据交换
+		
+		【兼容性问题】 JSON IE7 x 报错 
+			eval();函数很神奇，可以执行一段字符串形式的JS代码，并返回结果
+				- 字符串含有大括号{ } 会将大括号当成代码块
+					- 不希望当成代码块，在字符串前后各家一个（）
+					- eval("(" +str+ ")");
+					- 很强大，但是开发中尽量不要用，性能不好，安全隐患
+			如果需要兼容IE7 需要引入一个外部的JS文件
+					- json2.js
+		 -->
+		<script>
+			// var obj = '{
+			// 	"name": "songwukong",
+			// 	"age": 18,
+			// 	"gender":"nv"
+			// }'
+			// var arr = '['1,2,3', "hello","true"]';
+			// //console.log(obj.name)
+			
+			// var json = '{
+			// 	"name": "songwukong",
+			// 	"age": 18,
+			// 	"gender":"nv"
+			// }'
+			
+			// var o = JSON.parse(json);
+			// console.log(o)
+			
+			var obj3 = {
+				"name": "songwukong",
+				"age": 18,
+				"gender":"nv"
+			}
+			var obj = eval("(" +obj3+ ")");
+			console.log(obj);
+			
+			
+		</script>
+	</body>
+</html>

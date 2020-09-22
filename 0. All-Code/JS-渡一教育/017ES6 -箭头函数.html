@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+4,箭头函数: 1）只含有1个表达式 2）含有多条语句 
+3）this的指向问题 
+<script type="text/javascript">
+	//ES5
+	var foo = function(){
+		return 1;
+	}	
+	console.log(foo()); //1
+
+	let.foo = () => 1;
+	console.log(foo()); //1
+
+	let.foo = (a) => a;
+	console.log(foo(10)); //10
+
+	let foo = (a) =>{
+		let b = 10;
+		return a + b;
+	}
+	console.log(foo(10)); //20
+
+
+	//this 指向
+	var foo = () => {
+		console.log(this);//window
+	}
+
+	var name = "window";
+	var obj = {
+		"name":"luojin",
+		"sayHello":function(){
+			console.log(this.name);
+		}
+	}
+	obj.sayHello(); //luojin (obj)
+
+	//this 指向定义时指向的作用域，
+	//而不是执行时所在的作用域
+	var obj = {
+		"name":"luojin",
+		"sayHello":() => {
+			console.log(this.name);
+		}
+	}
+	obj.sayHello(); //window
+
+	var obj = {}；
+	obj.name = "luojin";
+	obj.sayHello = () => {
+			console.log(this.name);
+		}
+	obj.sayHello(); //obj
+
+	var obj = {
+		"name":"luojin",
+		"sayHello":function(){
+			setTimeout(()=> {console.log(this.name)},1000) ;
+		}
+	}
+	obj.sayHello(); //obj
+
+
+	var obj = {
+		"name":"luojin",
+		"sayHello":() => {
+			setTimeout(()=> {console.log(this.name)},1000) ;
+		}
+	}
+	obj.sayHello(); //window
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

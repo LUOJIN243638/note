@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+	<script type="text/javascript">
+		/*
+		1，type="text/javascript"说明当前script标签种文本的类型
+		2，左右的JS代码都必须写在script标签里边
+		3，为了语法规范，script标签写在head标签里边。
+		4，可以引入多个script标签，顺序执行
+		5，可以外部引入文件 src=“”
+		6，如果当前已经引入外部文件，里边不可写别的JS代码
+
+		*/
+
+		//alert("luojin"); //在页面上弹出警告框
+		//document.write("luojin") //在当前文本上输出内容
+	</script>
+
+	<script type="text/javascript">
+         alert("</script>") 
+
+         //执行错误：将其识别成标签了
+		//alert("luojin")
+	</script>
+
+	<script type="text/javascript" src="JS-Script.js">
+		alert("luojin") //不会执行
+	</script>
+</head>
+<body>
+
+</body>
+</html>

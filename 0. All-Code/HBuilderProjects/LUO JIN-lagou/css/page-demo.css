@@ -1,0 +1,181 @@
+			img{display: block;}
+			li{list-style: none;}
+			a{text-decoration: none;color: #000}
+			input{border: none;}
+			
+			.fl{float: left;}
+			.fr{float: right;}
+			.clearFixed:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+			
+			body{background-color: #f8f9fc;}
+			.header{
+				height: 360px;
+				background-color: #00B38A;
+			}
+			.boxCon{
+				width: 700px;
+				height: 490px;
+				position: absolute;
+				top: 77px;
+				left: 50%;
+				margin-left: -325px;
+			/* 	background: pink; */
+			}
+			.boxCon .logo{
+				height: 77px;
+				background: url(img2/logo.png) no-repeat;
+			}
+			.boxCon .forBox{
+				background: white;
+				height: 400px; /*490-77=413px*/
+				border: 1px solid #dcele6;
+				padding: 6px; /*给pading 要减小height*/
+			}
+			.boxCon .forBox .imgBox{
+			/* 	background: pink; */
+			}
+			.boxCon .forBox .imgBox img{
+				/* float: left; */
+				margin-right: 6px;
+			}
+			.boxCon .forBox .imgBox img:nth-child(2){
+				margin-top:-5px;
+			}
+			.boxCon .forBox .inpLeft{
+				width: 290px; /*416-63*2*/
+				height: 277px;
+				/* background: yellowgreen; */
+				padding: 0 63px;
+				border-right: 1px dotted #555555;
+				position: relative;
+			}
+			.boxCon .forBox .inpLeft .or{
+				position: absolute;
+				right: -8px;
+				top: 50%;
+				width: 18px;
+				height: 18px;
+				margin-top: -9px;
+				background-color: #fff;
+				text-align: center;
+			}
+			.boxCon .forBox .inpLeft .line1{
+				height: 40px;
+				border-bottom: 1px solid #99999;
+				line-height: 40px;
+				font-size: 18px;
+			}
+			.boxCon .forBox .inpLeft .line1 p{
+				width: 145px;
+				
+				text-align: center;
+				position: relative;
+			}
+			.boxCon .forBox .inpLeft .line1 p:nth-child(1){
+				color: #00B38A; 
+				border-bottom:1px solid #00B38A;
+			}
+			.btnRed:after{
+				content: "";
+				display: block;
+				border: 8px solid transparent;
+				border-bottom-color: #FFFFFF;
+				position: absolute;
+				margin-left: -10px;
+				bottom: -2px;
+				left: 50%;
+			}
+			.btnWhite:before{
+				content: "";
+				display: block;
+				border: 8px solid transparent;
+				border-bottom-color: #00B38A;
+				position: absolute;
+				margin-left: -10px;
+				bottom: 0px;
+				left: 50%;
+			}
+			.boxCon .forBox .inpLeft .lineInp{
+				height: 64px;
+				border-bottom: 1px solid #555555;
+			}
+			.boxCon .forBox .inpLeft .lineInp input{
+				/* height: 100%; */
+				width: 100%;
+				padding-top: 20px;
+				height: 42px;
+			}
+			.boxCon .forBox .inpLeft .txt{
+				color: #00B38A;
+				height: 58px;
+				line-height: 60px;
+				font-size: 12px;
+				/* background: red; */
+				text-align: right;
+			}
+			.boxCon .forBox .inpLeft input[type="submit"]{
+				height: 48px;
+				width: 100%;
+				background: #00B38A;
+				color: #FFFFFF;
+				text-align: center;
+				line-height: 48px;
+				font-size: 18px; 
+			} 
+			
+			 
+			.boxCon .forBox .inpRight{
+				/* width: 272px;  *//*700-216-12*/
+				/* height: 277px; */
+				/* background: yellow; */
+				padding-left: 52px;
+				color: #555555;
+				font-size: 14px;
+				padding-top: 80px;
+			}
+			
+			.boxCon .forBox .inpRight .txt2{
+				color: #00B38A;
+				font-size: 16px;
+				margin-bottom: 44px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.boxCon .forBox .inpRight .txt2 img{
+				display: inline-block;
+				margin-left: 3px;
+				vertical-align: middle;
+			}
+			.boxCon .forBox .inpRight .txt3 img{
+				padding-right: 15px;
+				margin-top: 10px;
+			}
+			
+			
+			
+			/* .spa{
+				display: block;
+				width: 200px;
+				border-bottom: 1px solid red;
+				position: relative;
+			}
+			.spa span:nth-child(1){
+				border: 20px solid transparent;
+				border-bottom-color: red;
+				position: absolute;
+				margin-left: -10px;
+				top: -39px;
+				left: 50%;
+			}
+			.spa span:nth-child(2){
+				border: 20px solid transparent;
+				border-bottom-color: #FFF;
+				position: absolute;
+				margin-left: -10px;
+				top: -37px;
+				left: 50%;
+			} */

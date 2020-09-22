@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 100px;height: 100px;}
+		#div1{background-color: red;}
+		#div2{background-color: blue;}
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		/*fadeIn() fadeOut() 淡入淡出
+		fadeTo(动画持续时间，透明度，回调函数)
+		*/
+		 $(function () {
+			$("#div1").hover(function(){
+
+				$("#div2").fadeTo(2000,0.5,function(){
+					$("#div1").html("移入")
+				});
+				
+			},function(){
+
+				$("#div2").fadeTo(2000,1,function(){
+					$("#div1").html("移出")
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>  
+</html>

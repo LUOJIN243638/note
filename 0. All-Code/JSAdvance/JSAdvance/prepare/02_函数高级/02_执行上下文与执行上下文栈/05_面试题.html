@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>05_面试题</title>
+</head>
+<body>
+<script type="text/javascript">
+  /*
+  测试题1: 先预处理变量, 后预处理函数
+  有变量提升和函数提升： 先执行变量提升，在执行函数提升
+  'function'
+  */
+  function a() {}
+  var a;
+  console.log(typeof a)
+
+
+  /*
+  测试题2: 变量预处理, in操作符
+  undefined
+   */
+  if (!(b in window)) {
+    var b = 1;
+  }
+  console.log(b)
+
+  /*
+  测试题3: 预处理, 顺序执行
+  2
+   */
+  var c = 1
+  function c(c) {
+    console.log(c)
+    //var c = 3
+  }  //提前执行好了
+  c(2) // 报错 c不是一个函数
+
+
+
+  var c
+  function c(c) {
+    console.log(c)
+    var c = 3  // 和里边的东西没关系，为了让你把关注点放在里边
+  }  //提前执行好了
+  c = 1
+  c(2) // 报错 c不是一个函数
+</script>
+</body>
+</html>

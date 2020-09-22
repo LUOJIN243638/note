@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				
+				   /* 1, Navigator,识别不同的浏览器
+				   历史原因，大部分属性不能帮助我们识别浏览器了
+				   userAgent = 浏览器信息
+					IE11 已经不能识别了
+					通过浏览器中的一些特殊的属性，来判断
+					window.ActiveXObject;
+					*/
+				console.log(window.navigator);
+				console.log(navigator);
+				console.log(navigator.appName);
+				console.log(navigator.userAgent);
+				
+				var ua = navigator.userAgent;
+				console.log(ua);
+				if(/firefox/i.test(ua)){
+					alert("你是FF");
+				}else if(/chrome/i.test(ua)){
+					alert("你是ChroMe");
+				}else if(/msie/i.test(ua)){
+					alert("你是IE");
+				}else if("ActiveXObject" in window){
+					alert("你是IE11。。。。");
+				}
+
+				// if(window.ActiveXObject){
+				// 	alert("你是IE11。。。。");
+				// }else{
+				// 	alert("你不是")
+				// }
+				
+				// alert(!!window.ActiveXObject);
+				
+				// alert("ActiveXObject" in window);
+				
+				
+				/* 
+				 2.history 
+				 向前向后翻页
+					- 属性：length 返回浏览器访问过链接的个数
+					- 方法：
+						- back 回退到上一个页面
+						  history.back();
+						  history.forword(); 前进，下一个页面
+						  history.go(1); 综合，跳转到指定的也页面
+						  history.go(-1);向后跳转有一个页面
+
+				 */
+				
+				/* 
+				location 地址栏
+				 该对象中封装了浏览器的地址栏信息
+				  - lacation 获取完整地址栏路径当前页面的
+				  - lacation = "......",修改地址栏的信息
+				  - 方法 
+					- assign("....") 跳转到其他页面= 直接修改location
+					- location.reload(); 刷新
+					- location.reload(true);=ctrl +F5 强制清空缓存 
+					- location.replace("01.BOM.html"); 嗲用完了也会跳转页面，不能退回去
+					
+				 */
+			}
+		</script>
+	</head>
+	<body>
+		<!-- BOM 浏览器对象模型
+		 通过JS操作浏览器
+			- 提供了一组对象，，来完成浏览器对象
+		BOM 对象
+			- window 
+				- 整个浏览器窗口。全局对象
+			- Navidator
+				- 当前浏览器的信息，通过该对象识别浏览器信息
+			- Location
+				- 浏览器的地址栏信息，获取地址栏信息，可以操作跳转页面
+			- History 
+				- 历史记录，通过该对象操作历史记录，隐私的原因不能获取具体的信息
+				- 只能操作按钮，只在当次访问时有效
+			- Screen
+				- 用户屏幕信息，显示器相关信息，PC端用的不多
+			这些BOM对象都是在浏览器中作为window对象保存的
+			可以通过window对象来使用，也可以直接使用
+		 -->
+		 
+	</body>
+</html>

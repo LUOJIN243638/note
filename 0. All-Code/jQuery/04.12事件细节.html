@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<style type="text/css">
+		div{padding: 50px;}
+		#div1{background-color: red;}
+		#div2{background-color: blue;}
+		#div3{background-color: orange;}
+	</style>
+	<script type="text/javascript">
+	/* ev pageX 
+	which:鼠标事件 =button 判断按哪个键
+	keydown: keycode 
+	keypress: charCode 区分大小写
+       preventDefault stopPropagation
+      【注】不能为了使用JQ而使用JQ，如果JS开发时一次额简单的操作，没必要用JQ
+      阻止事件冒泡 
+	*/
+   $(function(){
+   		$("div").click(function(ev){
+   			alert(this.id);
+   			//alert($(this).attr("id"));
+   			ev.stopPropagation();
+   		});
+   		$("a").click(function(ev){
+   		// 	ev.preventDefault(); //阻止默认行为
+   		// 	ev.stopPropagation(); //阻止事件冒泡
+   		// })
+   		//阻止默认事件+阻止默认行为
+   		return false;
+   	     });
+
+   		$(document).mousedown(function(ev){
+   			/*alert(ev.pageX+"."+ev.pageY); //带滚动距离
+   			alert(ev.clientX+"."+ev.clientY);
+   			//可视窗口为原点*/
+
+   			//which
+   			alert(ev.which);
+   		})
+
+   		$(window).keydown(function(ev)){
+   			alert(ev.which);
+   		}
+   		$(window).keypress(function(ev)){
+   			alert(ev.which); //不支持功能键
+   		}
+   	}); 
+	</script>
+</head>
+<body style="height: 300px">
+<!-- 	<div id="div1">
+	<div id="div2">
+		<div id="div3">
+			<a href="https://www.baidu.com">baidu</a>
+		</div>
+	</div>
+</div> -->
+</body>
+</html>

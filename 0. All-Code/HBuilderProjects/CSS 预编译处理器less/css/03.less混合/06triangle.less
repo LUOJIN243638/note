@@ -1,0 +1,26 @@
+.triangle(@_){
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+}
+.triangle(L,@w,@c){
+	border-width: @w;
+	border-style:dashed solid dashed dashed;
+	border-color: transparent @c transparent transparent;	 
+}
+
+.triangle(R,@w,@c){
+	border-width: @w;
+	border-style:dashed solid dashed dashed;
+	border-color: transparent transparent transparent @c;	 
+}
+.triangle(T,@w,@c){
+	border-width: @w;
+	border-style:dashed solid dashed dashed;
+	border-color: transparent transparent @c transparent;	 
+}
+.triangle(B,@w,@c){
+	border-width: @w;
+	border-style:dashed solid dashed dashed;
+	border-color: @c transparent  transparent transparent;	 
+}

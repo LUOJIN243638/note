@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		body{overflow: hidden;}
+		div{width: 100px;height: 100px;background-color: red;position: absolute;;left: 0;right: 0;}
+	</style>
+</head>
+<body>
+	<div id="div"></div>
+<script type="text/javascript">
+	var speedX = 5;
+	var speedY = 3;
+
+	var div = document.getElementById("div");
+	//var div = document.querySeletor("div");
+
+	function move() {
+		var style = window.getComputedStyle(div);
+		var currentLeft = parseInt(style.left);
+		var currentTop = parseInt(style.top);
+
+		//在move之前先要检测有没有碰撞，如果彭了速度取反
+		check_border_collision(div);
+
+		var left = currentLeft + speedX;
+		var top = currentTop + speedY;
+		div.style.left = left + "px";
+		div.style.top = top + "px";
+
+	}
+	function check_border_collision(el){
+		var style = window.getComputedStyle(el);
+		var left = parseInt(style.left);
+		var top = parseInt(style.top);
+		var w = parseInt(style.width);
+		var h = parseInt(style.height);
+
+		//水平方向检测
+		if (left < 0 ) {
+			left = 0;
+			speedX *= -1;  //反向
+		}
+		if (left > window.innerWidth - w){ 
+		//与右边缘相撞
+			left = window.innerWidth - w;
+			speedX *= -1;
+		}
+		//垂直方向检测
+		if (top < 0) {
+			top = 0;
+			speedY *= -1;
+		}
+		if (top > window.innerHeight - h) {
+			top = window.innerHeight - h;
+			speedY *= -1;
+		}
+		el.style.top = top + "px";
+		el.style.left = left +"px";
+	}
+	setInterval(function(){
+		move()
+	},20);
+</script>
+
+</body>
+</html>

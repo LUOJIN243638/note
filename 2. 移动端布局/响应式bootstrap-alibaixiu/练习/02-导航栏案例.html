@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .container{
+            width: 750px;
+            margin: 0 auto;
+        }
+        .container ul  li{
+            float: left;
+            width: 93.75px;
+            height: 30px;
+            background-color: brown;
+        }
+
+        /* nav 里边每个li : 750 / 8 = 93.75  */
+
+         /* 小屏幕下 < 768 （不包括768） 布局容器宽度 = 100% */
+         @media screen  and (max-width: 767px){
+             .container {
+                 width: 100%;
+             }
+             .container ul li{
+                 width: 33.33%;
+             }
+         }
+    </style>
+</head>
+<body>
+    <!-- 响应式开发里边，首先需要一个布局容器 -->
+    <div class="container">
+        <ul>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+        </ul>
+    </div>
+</body>
+</html> 

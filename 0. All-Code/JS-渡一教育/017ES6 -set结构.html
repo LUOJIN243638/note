@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var set = new Set([1,2,2,3,4,2]);
+		console.log(set); //{1,2,3,4}
+
+		console..log(set.has(1));//是否含有元素1 true
+		set.add(0);
+		set.add(1); //值不能重复
+		set.delete(1);
+		set.clear(); //清空
+		console.log(set，set.size);//{} 0
+
+
+
+
+		/*//扩展运算符...
+		var arr = [...set]; //[1,2,3,4]
+		console.log(arr);
+
+		for (let i of set){
+			console.log(i); //1,2,3,4
+		}
+		for (let i of arr){
+			console.log(i); //1,2,3,4
+		}
+*/
+		
+
+
+	</script>
+
+</body>
+</html>

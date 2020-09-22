@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 500px;height: 300px;border: 1px solid #CECECE;}
+	</style>
+</head>
+<body>
+<div>点击按钮或者回车键发布文字</div>
+<input type="text"><input type="button" value="发布">
+<script type="text/javascript">
+	var oDiv = document.getElementsByTagName('div')[0];
+	var aInput = document.getElementsByTagName('input');
+	aInput[1].onclick = commentTxt;
+	function commentTxt(){ //第一个input的内容放到div里边 按下回车键 触发事件
+		oDiv.innerHTML += aInput[0].value;
+	}
+	aInput[0].onKeydown = function(e){
+		var evt = e || window.event;
+		if(evt.ctrlKey && evt.keyCode == 13){
+			commentTxt();
+		}
+	}
+</script>
+</body>
+</html>

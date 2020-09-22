@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+3，模板字符串:将变量或表达式直接嵌入字符串 ，使用反引号(``)拼接多行字符串
+<ul id="test"></ul>
+<script type="text/javascript">
+	var arr = [0,1,2,3,4]
+	let oUl = document.getElementById('test');
+	var html = "";
+	//ES5
+	/*for(var i in arr){
+		html += "<li>"+arr[i]+ "</li>"
+	}
+	oUl.innerHTML = html;*/
+	//ES6
+	for(var i in arr){
+		//html += `<li>${arr[i]}</li>`
+		html += `<li>
+			<a href = "">${arr[i]}</a>
+		</li>`
+	}
+	oUl.innerHTML = html
+
+	/*//ES5
+	var obj = {"name":"luojin","age":20};
+	var name = obj.name;
+	var age = obj.age;
+	console.log(name + "的年龄是" + age); //luojin的年龄是20
+
+	//ES6
+	let obj = {"name":"luojin","age":20};
+	let{name,age} = obj;
+	console.log(`${name} 的年龄是 ${age}`); //luojin的年龄是20*/
+
+</script>
+
+
+</body>
+</html>

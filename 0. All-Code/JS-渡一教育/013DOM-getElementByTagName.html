@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*
+		document.getElementsByTagName() 参数：标签名
+		node.getElementsByTagName() 
+		【注】：从node节点开始找出所有符合条件的元素节点
+		功能：获取当前页面所有符合该标签名字标准的元素的节点
+		返回值：所有符合条件的元素节点[object HTMLCollection]
+		*/
+		window.onload=function(){
+			//1,获取所有Li标签
+			//var aLis = document.getElementsByTagName('li');
+			//alert(aLis);  // [object HTMLCollection]这是一个数组，
+			//alert(aLis.length); //8
+			//2,想获取 UL下的所有li标签
+			var oUl = document.getElementById('ul1');
+			var aLis= oUl.getElementsByTagName('li');
+			//alert(aLis.length); //4
+
+			for(i=0;i<aLis.length;i++){
+				alert(aLis[i].innerHTML);
+				//alert(aLis[i])
+				//alert(aLis.item(i).innerHTML) 这个用的比较少
+			}
+		}
+	</script>
+</head>
+<body>
+	<ul id="ul1">
+		<li>11111</li>
+		<li>22222</li>
+		<li>33333</li>
+		<li>44444</li>
+	</ul>
+	<ol>
+		<li>55555</li>
+		<li>66666</li>
+		<li>77777</li>
+		<li>88888</li>
+	</ol>
+</body>
+</html>

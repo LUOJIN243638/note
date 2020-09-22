@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#areaDiv{
+				width: 500px;
+				height: 200px;
+				border: 1px solid #8B0000;
+				margin-bottom: 20px;
+			}
+			#showMsg{
+				width: 500px;
+				height: 100px;
+				border: 1px solid #8B0000;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				/* 当鼠标在areaDiv中移动时，在showMsg中显示鼠标的坐标 */
+				//1, 获取两个div
+				var areaDiv = document.getElementById("areaDiv");
+				var showMsg = document.getElementById("showMsg");
+				
+				/* 
+				事件对象：当事件响应函数被触发时，浏览器都会将事件对象作为实参传进响应函数 
+					- 在事件对象中封装了当前时间相关的一些信息，
+					- 比如，鼠标的坐标，键盘的按键，鼠标滚动的方向
+				*/
+				//2, 鼠标在上边框移动式在显示 onmousemove在鼠标移动时触发
+				areaDiv.onmousemove = function(event){
+					 //alert(event);
+					 //3,show中显示鼠标的坐标
+					 /* clientX 可以获取鼠标指针的水平坐标
+						clientY  
+							- 兼容性不好 IE8
+						在IE8及一下浏览器中，响应函数被触发时，浏览器不会传递事件对象
+							- 是将事件对象作为window对象的属性保存,但是其他又不行
+					 if(!event){
+					 	event = window.event;
+					 }
+					
+					 */
+					
+				    event = event || window.event;
+					
+					var x = event.clientX;
+					var y = event.clientY;
+					showMsg.innerHTML = "x=" + x + ", y=" + y;					
+				}
+			};
+			
+			/* 
+				2，事件对象函数
+			*/
+		   function event(){
+			    event = event || window.event;
+		   }
+			
+		</script>
+	</head>
+	<body>
+		
+		<!-- 事件对象
+		
+		-->
+		
+		<div id="areaDiv">
+		</div>
+		<div id="showMsg">
+		</div>
+	</body>
+</html>

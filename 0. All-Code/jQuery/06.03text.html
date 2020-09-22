@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		/*
+		JQ 标签间的内容 html() = innerHTML
+		JQ 标签间的纯文本 text() = innertext
+		*/
+		$(function () {
+			alert($("#div1").html());
+			alert($("#div1").text());
+
+			//$("#div1").html("<h1>hello</h1>")
+			//$("#div1").text("<h1>hello</h1>")
+			
+		})
+		
+	</script>
+</head>
+<body>
+<div id="div1"><em>em</em>div text<strong>strong</strong></div>
+</body>  
+</html>

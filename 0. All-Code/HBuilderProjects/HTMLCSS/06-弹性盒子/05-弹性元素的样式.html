@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        ul{
+            width: 800px;
+            border: 10px solid red;
+            display: flex;  
+            justify-content: center;
+            align-items: center; 
+
+        }
+        li{
+            width: 200px;
+            background-color: royalblue;
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+
+            flex-shrink:0;
+
+
+
+            /* 
+            flex-grow
+            flex-shrink
+            flex-basis:auto;默认
+            flex:增长 缩减 基础值
+            */
+        }
+        li:nth-child(2){
+            background-color: aqua
+
+            /* order
+            排列顺序
+            */
+        };
+        li:nth-child(3){
+            background-color: salmon;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2
+        <div>2</div>
+    </li>
+    <li>3
+        <div>3</div>
+        <div>3</div>
+    </li>
+    <li>1</li>
+    <li>1</li>
+</ul>
+
+    
+</body>
+</html>

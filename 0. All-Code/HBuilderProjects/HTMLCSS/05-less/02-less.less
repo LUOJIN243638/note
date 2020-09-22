@@ -1,0 +1,48 @@
+// body{
+//     background: red;
+// }
+.box1{
+    background: yellow;
+    .box2{ 
+        background: green;
+        .box3{
+            background: blue;
+        }
+    }
+    
+}
+
+//这里单行注释，不会被解析到css中
+/*多行，会被解析到css*/
+
+//变量，可以存任意的值，并在需要时任意修改
+//变量语法：
+@a:100px; 
+@c:red;
+@b:box6;
+
+.box5{
+    //直接使用：@变量名
+    width: @a;
+    background: @c;
+}
+    //作为类名使用或者一部份值使用：@{变量名}
+.@{c}{
+    width: @a;
+    background-image: url("@{c}/1.png");
+}
+
+@d:200px;
+@d:300px; //就近原则
+
+div{
+    width: @d;
+    height: @e;
+}
+@e: 330px; //也可以写下边
+
+div{
+    width: 300px;
+    height: $width; //新版语法
+}
+

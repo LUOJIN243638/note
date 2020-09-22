@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 100px;height: 100px;}
+		#div1{background-color: red;}
+		#div2{background-color: blue;}
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		/*fadeIn() fadeOut() 
+		slidedown()
+		slideup()动画效果是卷闸*/
+		
+		$(function () {
+			$("#div1").hover(function(){
+
+ 				//隔两秒隐藏，同时将div的HTML改成移入
+				$("#div2").slideDown(2000,function(){
+					$("#div1").html("移入")
+				});
+				
+			},function(){
+
+				$("#div2").slideUp(2000,function(){
+					$("#div1").html("移出")
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>  
+</html>

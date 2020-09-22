@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 100px;height: 100px;}
+		#div1{background-color: red;}
+		#div2{background-color: blue;}
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		/* hover(funcOver,funcOut
+		hide()参数1，动画持续的毫秒数；参数2：回调函数，动画结束的时候执行的 
+		show() 【注】这两个是动画效果是，从左上角收起和展开*/
+		//控制div显示和隐藏,一般改display
+		$(function () {
+			$("#div1").hover(function(){
+				//$(this).html("over");
+
+ 				//隔两秒隐藏，同时将div的HTML改成移入
+				$("#div2").hide(2000,function(){
+					$("#div1").html("移入")
+				});
+				
+			},function(){
+				//$(this).html("out");
+
+				$("#div2").show(2000,function(){
+					$("#div1").html("移出")
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>  
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- 
+		 setInterval() 定时调用
+		 希望1会自动变化1，2，3，4，。。。
+		 -->
+		<h1 id="count"></h1>
+		<script>
+			// 1, get count 
+			var count = document.getElementById("count");
+			
+			// 2, count中的内容自动切换
+			// 2.1 js程序执行时非常快的 只能看到最后一个，执行过程看不见
+			//2.2 希望程序每隔一段时间执行一次
+			/* for (var i = 0; i < 10; i++){
+				count.innerHTML = i;
+				alert("下边每次都会执行一次这个，就能看到0-9了，但是希望每个1s执行一次")
+			} */
+			
+			//3, 定时调用，可以将一个函数每隔一段时间执行一次
+			//3.1 参数1：回调函数； 参数2：间隔时间ms
+			var num = 1;
+			var timer = setInterval(function(){
+					count.innerHTML = num ++;
+					
+					if(num == 11){
+						clearInterval(timer);
+					}
+					
+			},1000);
+			
+			//4,需要关闭定时器
+			//4.1 这个参数有一个返回值,作为定时器唯一标识
+			//4.2 clearInterval 
+			//clearInterval(timer);
+			// console.log(timer); 
+		</script>
+	</body>
+</html>

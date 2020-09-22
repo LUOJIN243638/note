@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04_自定义构造函数模式</title>
+</head>
+
+<body>
+<!--
+方式四: 自定义构造函数模式
+  * 套路: 自定义构造函数, 通过new创建对象
+  * 适用场景: 需要创建多个类型确定的对象
+  * 问题: 每个对象都有相同的数据, 浪费内存
+-->
+<script type="text/javascript">
+
+  // 定义类型
+  function Person(name, age) {
+    this.name = name
+    this.age = age
+    this.setName = function (name) {
+      this.name = name
+    }
+  }
+
+  var p1 = new Person('Tom', 12) // 创建实例对象
+  var p2 = new Person('Tom2', 13)
+  console.log(p1, p1 instanceof Person)
+  console.log(p1, p1)
+  // 两个的方法一摸一样，占用空间，如何解决？？？添加到原型里
+
+  function Student(name, age) {
+    this.name = name
+    this.age = age
+    this.setName = function (name) {
+      this.name = name
+    }
+  }
+  var s1 = new Student('Tom2', 13)
+</script>
+</body>
+</html>

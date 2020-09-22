@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 800px;
+            background-size: contain;
+            opacity: 0.8;
+            background-size: contain;
+            background: url(imgs/25.jpg) no-repeat;
+        }
+        
+        section{
+            position: relative;
+            width: 200px;  
+            height: 150px;
+            margin: 400px auto;
+            transform-style: preserve-3d;
+            animation: rotate 10s linear infinite;
+            background: url(imgs/12.jpg) no-repeat;
+            background-size: contain;
+        }
+        img{
+            width: 200px;
+            height: 150px;
+        }
+        section:hover{
+            animation-play-state: paused;
+        }
+        @keyframes rotate {
+            from{
+                transform: rotateY(0);
+            }
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+        section div{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;    
+
+        }
+        section div:nth-child(1){
+            transform: rotateY(0) translateZ(300px);
+        }
+        section div:nth-child(2){
+            /* 360 / 6 = div */
+            transform: rotateY(45deg) translateZ(300px); 
+        }
+        section div:nth-child(3){
+            /* 360 / 6 = div */
+            transform: rotateY(90deg) translateZ(300px); 
+        }
+        section div:nth-child(4){
+            /* 360 / 6 = div */
+            transform: rotateY(135deg) translateZ(300px); 
+        }
+        section div:nth-child(5){
+            /* 360 / 6 = div */
+            transform: rotateY(180deg) translateZ(300px); 
+        }
+        section div:nth-child(6){
+            /* 360 / 6 = div */
+            transform: rotateY(225deg) translateZ(300px); 
+        }
+        section div:nth-child(7){
+            /* 360 / 6 = div */
+            transform: rotateY(270deg) translateZ(300px); 
+        }
+        section div:nth-child(8){
+            /* 360 / 6 = div */
+            transform: rotateY(315deg) translateZ(300px); 
+        }
+        section div:nth-child(9){
+            /* 360 / 6 = div */
+            transform: rotateY(360deg) translateZ(300px); 
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div><img src="imgs/20.jpg" alt=""></div>
+        <div><img src="imgs/12.jpg" alt=""></div>
+        <div><img src="imgs/6.jpg" alt=""></div>
+        <div><img src="imgs/12.jpg" alt=""></div>
+        <div><img src="imgs/14.jpg" alt=""></div>
+        <div><img src="imgs/19.jpg" alt=""></div>
+        <div><img src="imgs/21.jpg" alt=""></div>
+        <div><img src="imgs/23.jpg" alt=""></div>
+        <div><img src="imgs/2.jpg" alt=""></div>
+    </section>
+</body>
+</html>

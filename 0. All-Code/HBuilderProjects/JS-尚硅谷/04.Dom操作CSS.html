@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 200px;
+				height: 200px;
+				background: #008000;
+				
+			}
+			
+			/* 点击按钮以后，修改box1的大小
+			 JS
+			 语法： 元素.style.样式名= 样式值
+			   
+			 */
+			
+		</style>
+		<script>
+			window.onload = function(){
+				
+				var box1 = document.getElementById("box1");
+				
+				var btn1 = document.getElementById("btn1");
+				btn1.onclick = function(){
+					/* 1,  这样改的时内联样式，有较高优先级，甚至覆盖
+					但是在样式后边加！important 尽量不要用*/
+					box1.style.width = "500px";	
+				};
+				
+				//  2，读取样式
+				var btn2 = document.getElementById("btn2");
+				btn2.onclick = function(){
+					/* 2.1 通过style属性读取的都是内联样式，样式表中无法读取*/
+					alert(box1.style.width); 
+				};
+				// 3. 读取css样式表中的样式
+				var btn3 = document.getElementById("btn3");
+				btn3.onclick = function(){
+					//alert(box1.style.width);
+					//获取元素当前显示的样式 currentStyle 只有IE支支持
+					// alert(box1.currentStyle.width); 
+					
+					// 其他浏览器 getComputedStyle(元素，伪元素null)
+					//区别：获取真实的值，不是默认值
+					alert(getComputedStyle(box1,null).width);
+	
+				// currentStyle getComputedStyle只读 不可改； 要改的话用style属性
+				var a = getStyle(box1, "background");
+				alert(a);
+				  
+				};
+				
+			};
+			
+			/* 
+			1，获取指定元素当前样式
+			  参数1 - obj 要获取的元素  参数2- 要获取的样式名 
+			 */
+			function getStyle(obj, name){
+				if(window.getComputedStyle){
+					//正常浏览器
+					return getComputedStyle(obj, null)[name];
+				}else{
+					//IE8
+					return obj.currentStyle[name];
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="box1">	
+		</div>
+		<button type="button" id="btn1">改大小</button>
+		<button type="button" id="btn2">读取样式</button>
+		<button type="button" id="btn3">读取样式2</button>
+	</body>
+</html>

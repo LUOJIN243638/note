@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box1{
+				width: 200px;
+				height: 200px;
+				background-color: #008000;
+			}
+			#s1{
+				background-color: yellow;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<!-- 事件冒泡
+		 点击后代元素点击元素全部被触发了 = 事件冒泡Bubble
+		
+		开发中大部分冒泡是有用的：
+		
+		如果不希望可以取消，通过事件对象
+		event = event || window.event;
+		
+		event.cancelBubble = true;
+		
+		 -->
+		 
+		 <div id="box1">
+		 	<span id="s1">
+		 		im span
+		 	</span>
+		 </div>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position: absolute;
+			}
+			#box2{
+				width: 80px;
+				height: 80px;
+				background-color: yellow;
+				position: absolute;
+				top: 200px;
+				left: 300px;
+			}
+			#box3{
+				width: 50px;
+				height: 50px;
+				background-color: rosybrown;
+				position: absolute;
+				top: 400px;
+				left: 400px;
+			}
+			#box4{
+				width: 100px;
+				height: 100px;
+				background-color: lightgreen;
+				position: absolute;
+				top: 300px;
+				left: 100px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var box1 = document.getElementById("box1");
+				var box2 = document.getElementById("box2");
+				//1, 鼠标按下事件
+	
+				//开启box1的拖拽
+				drag(box1);
+				drag(box2);
+				drag(box3);
+				drag(box4);
+			
+			}		
+
+/* 4，用来拖拽的函数 
+参数：
+	- obj 开启拖拽的元素
+*/
+function drag(obj){
+	obj.onmousedown = function(event){
+		//4. 解决问题：div的水平偏移量： clientX - 元素.offsetLeft
+		
+		//5，设置obj的捕获事件,松开就不要捕获了,chorm 不行
+		// if(obj.setCapture){
+		// 	obj.setCapture();
+		// }
+		obj.setCapture && obj.setCapture();
+		
+		event = event || window.event;
+		var ol = event.clientX - obj.offsetLeft;
+		var ot = event.clientY - obj.offsetTop;
+		
+		// 2， 跟着移动事件
+		document.onmousemove = function(event){
+				event = event || window.event;
+				//获取鼠标坐标
+				var left = event.clientX - ol;
+				var top = event.clientY - ot;
+				
+				// 修改obj的位置
+				obj.style.left = left + "px";
+				obj.style.top = top + "px";
+				
+		}
+		//3,鼠标松开
+		document.onmouseup = function(){
+		
+			document.onmousemove = null;
+			document.onmouseup = null;
+			obj.releaseCapture && obj.releaseCapture();
+		}
+		return false;
+		//4, 问题：希望鼠标指针的位置不会变 控制元素位置
+	}
+}
+
+
+		</script>
+	</head>
+	<body>
+		我是一段文字，选中文字，浏览器有一个特点，可以搜索他
+		<div id="box1">
+			
+		</div>
+		<div id="box2">
+			
+		</div>
+		<div id="box3">
+			
+		</div>
+		<div id="box4">
+			
+		</div>
+	</body>
+</html>

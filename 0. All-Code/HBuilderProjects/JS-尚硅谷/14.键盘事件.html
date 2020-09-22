@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: #008000;
+			}
+		</style>
+		<script type="text/javascript" src="./tools.js"> </script>
+		<script type="text/javascript">
+			window.onload = function(){
+				document.onkeydown = function(event){
+					event = event || window.event;
+					
+					//判断y是不是 被按下？
+					//判断y和ctrl是不是同时按下？
+					if(event.keyCode == 89 && event.ctrlKey == 89){
+						console.log("Y被按下了");
+					}
+					
+					
+				};
+				document.onkeyup = function(){
+					console.log("按键松开了");
+				};
+				
+				
+				//获取input 
+				var input = dcument.getElementsByTagName("input");
+				input.onkeydown = function(event){
+					event = event || window.event;
+					if(event.keyCode >= 48 && event.keyCode <= 57){
+						return false;
+					}
+					
+					//console.log(event.keyCode);
+					// 是文本框中不饿能输入数字 48-57
+					
+					
+				 //在文本框中输入内容，属于onkeydown的默认行为，
+				 //如果取消了默认行为，输入内容不会出现在文本框里
+					
+				}
+				
+			};
+		</script>
+	</head>
+	<body>
+		<!-- 键盘事件: 
+		- 一般绑定给可以获取给而已获取焦点的对象或者document
+			onkeydown  
+				- 对于他来说，如果不松手，按键会连续触发
+				- 当这个连续触发时 ，第一次和第二次间隔长一点，其他非常快
+				  防止我们误操作，如果时间长了，就知道我们不是误操
+			onkeyup 
+				- 松开了
+				
+			想知道按下的是谁呢？
+			keyCode 
+				- 获取案件编码
+			altKey 
+			ctrlKey
+			shiftKey 
+				- 判断是不是按下，是就返回true
+			
+		 -->
+		<div id="box1"></div>
+		<input type="text" name="" id="" value="" />
+	</body>
+</html>

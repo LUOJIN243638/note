@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+	/* 通过循环按行顺序5*5的二维数组a属于1到25的自然数，然后输出该数组的左下半三角。
+	1，2，3，4，5
+	6，7，8，9，10
+	11,12,13,14,15
+	16,17,18,19,20
+	21,22,23,24,25 
+		*/
+	var count=0; //从1-25累加的中间变量
+	var arr =[];
+	for(var i=0;i<5;i++){ //生成5个数组，存在arr
+		var newArr=[]; //每一个newArr都有5个数，
+		for (var j=0;j<5;j++){
+			newArr.push(++count);
+		}
+		arr.push(newArr);
+	}
+	//alert(arr.length); //5
+	//alert(arr[0]); //1,2,3,4,5
+	//alert(arr[0][0]); //1
+
+	for (var i=0;i<arr.length;i++){ //一共打印5行数据
+		//每一行中打印的元素，和当前行数相等。第一行打一个，第二行打两个....
+		for (var j=0;j<=i;j++){
+			document.write(arr[i][j]+"&nbsp;&ensp;")
+		}
+		document.write("<br>"); //每一行打印一个换行。 
+	}
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

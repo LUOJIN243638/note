@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+		/*
+			查看JS语法错误：
+			1，火狐：附加组件+firebug的东西，安装在浏览器重启
+			2，谷歌：控制台-检查
+			
+			1,任何类型数据和字符串相加，其他类型都转换成为字符串。
+			字符拼接，此时的相加操作不再是数学意义上的加法，而是表示拼接的意思。
+			如果其中一个操作数是字符串的时候，+号叫做字符串拼接符。
+			2，任何数据除了和字符串做相加运算之外，先要将字符串转成数字在进行运算
+			<1>和NaN运算=NaN；
+			<2>字符串如果是纯数字字符串转成数字，否则转成NaN。
+			3,任何其他数据除了和字符串相加以外，和数字类型做运算时，都转为数字]
+			3,true-->0
+			4,null-->0
+			undefined-->NAN
+
+		*/
+
+		/*
+		var tmp="你"+"好";//你好
+		alert(tmp);
+
+		var tmp2="1"+1; //将后边的数字转成字符串=11
+		alert(tmp2)
+
+		var tmp3='h'+true;
+		alert(tmp3);
+
+		var tmp4="h"+undefined;
+		alert(tmp4);
+		*/
+
+		var tmp=1-"2";//-1,由于先将字符串转成了数字在运算
+		alert(tmp);
+		var tmp2=1-"2a";//NaN, 不是一个数字
+		alert(tmp2);
+		var tmp3=NaN-NaN; //NaN
+
+		var tmp4=1*'1';//1
+		var tmp5=1/'1';//1
+
+		var tmp6=1+true;//2
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

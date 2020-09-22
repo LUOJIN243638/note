@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!--生命周期（也叫勾子函数）三阶段，都会对应回调函数
+        1，初始化显示
+        - beforeCreate()
+        - created()
+        - beforeMount()
+        - mounted()
+        2，更新显示 this.xxx = value
+        - beforeUpdate()
+        - updated()
+        3，死亡
+        - beforeDestroy()
+        - destrored()
+
+        常用的生命周期的方法
+        mounted（）挂载 发送ajax请求，启动定时器等异步任务
+        beforeDestroy() 做收尾
+        Destroy()
+
+        常用生命周期方法
+        created（）/mounted（）：发送ajax请求，
+         启动定时器等异步任务
+        beforeDestr0y() 收尾工作，比如计时器
+     -->
+     <div id="demo">
+        <button v-on:click = "destroyVM">destroy vm</button>
+        <!-- 显示显示隐藏 -->
+        <p v-show="isShow">尚硅谷IT教育</p>
+
+        <p>{{isShow}}</p>
+        <p>{{isShow}}</p>
+        <p>{{isShow}}</p>
+        <p>{{isShow}}</p>
+     </div>
+     <script type="text/javascript" src="../js/vue.js"></script>
+     <script>
+
+         new Vue({
+             el: '#demo',
+             data: {
+                 //每隔一秒钟改变一下这个值，循环计时器
+                 isShow: true
+             },
+
+             //1, 初始化阶段
+             beforeCreate(){
+                 console.log('beforeCreate()')
+             },
+             Created(){
+                 console.log('Create()')
+             },
+
+             beforeMount(){
+                 console.log('beforeMount()')
+             },
+
+             //初始化显示后立即调用一次
+             mounted(){
+                 console.log("mounted()")
+                 //只要是回调函数,一旦一个函数当参数传递，
+                 //就写箭头函数function(){}，没有自己的this，就用外边的，外边的this= vm对象
+                 this.intervalId = setInterval(() => {
+                     /*内存泄露：
+                    虽然vm停了，但是定时器还在反复执行
+                    */
+                    console.log("---------------------")
+                    console.log("看定时器有咩有反复执行")
+                    //update data
+                    this.isShow = !this.isShow
+                },1000)
+             },
+
+             //2，更新阶段
+             beforeUpdate(){
+                 console.log('beforeUpdate()')
+             },
+             updated(){
+                 console.log('update()')
+             },
+
+
+
+             //3, 死亡阶段
+             //死亡之前只调用一次
+             beforeDestroy(){
+                 //清除计时器，需要传一个number型的intervalID
+                 console.log("beforeDestroy()")
+                 clearInterval(this.intervalId)
+             },
+             destroyed(){
+                 console.log('destroyed()')
+             },
+
+             mothods: {
+                 destroyVM(){
+                     //干掉vm
+                     this.$destroy()
+                 }
+             }
+
+         })
+     </script>
+</body>
+</html>

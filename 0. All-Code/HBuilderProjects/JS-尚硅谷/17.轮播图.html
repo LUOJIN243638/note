@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>轮播图</title>
+		<style>
+			*{margin: 0; padding: 0;}
+			#outer{width: 520px; height: 333px;margin: 50px auto;
+			background-color: yellowgreen;padding: 10px 0px;
+			position: relative; overflow: hidden;}
+			#imgList{list-style: none;position: absolute;
+			left: -1040px;}
+			#imgList li{float: left; margin: 0 10px;}
+			img{
+				width: 500px;
+				height: 333px;
+			}
+			
+			/* nav */
+			#navDiv{
+				position: absolute;
+				bottom: 15px;
+				
+			}
+			#navDiv a{
+				float: left;
+				width: 15px;
+				height: 15px;
+				margin: 0 5px;
+				background-color: #FF0000;
+				opacity: 0.5;
+				filter: alpha(opaity=50);
+			}
+			/* 鼠标移入效果 */
+			#navDiv a:hover{background-color: black;}
+		</style>
+		<script src="./tools.js"></script>
+	</head>
+	<body>
+		<!-- 1, 创建一个外部的div, 来作为大的容器 -->
+		<div id="outer">
+			<!-- 2, 创建一个ul , 来放置图片  -->
+			<ul id="imgList">
+				<li><img src="images/1.png" ></li>
+				<li><img src="images/2.png" ></li>
+				<li><img src="images/3.png" ></li>
+				<li><img src="images/4.png" ></li>
+				<li><img src="images/5.png" ></li>
+			</ul>
+			<!-- 3, 创建导航按钮 -->
+			<div id="navDiv">
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+			</div>
+		</div>
+		<script>
+			// 设置imgList 的宽度
+			//1, 获取<ul> 所有的img
+			var imgList = document.getElementById("imgList");
+			var imgArr = document.getElementsByTagName("img");
+			
+			//2, 设置imgList的宽度
+			imgList.style.width = 520 * imgArr.length+"px";
+			
+			//3, 设置导航点居中
+			var navDiv = document.getElementById("navDiv");
+			var outer = document.getElementById("outer");
+			navDiv.style.left = (outer.offsetWidth - navDiv.offsetWidth) / 2 + "px";
+			
+			//4, 超链接样式 
+			index = 0;
+			var allA = document.getElementsByTagName("a");
+			allA[index].style.backgroundColor = "black";
+			 
+			//5, 点击超链接显示图片
+			for (var i = 0; i < allA.length; i++){
+				//5.2 为超链接添加单机响应函数，添加一个num属性，索引当作对象的属性
+				allA[i].num = i;
+				allA[i].onclick = function(){
+					// 5.1 获取点击超链接的索引， 先执行for循环，再单机响应函数
+					index = this.num;
+					
+					// 5.3  切换图片,引入move函数
+					//imgList.style.left = -520 * index + "px";
+					move(imgList, "left", -520*index, 20, function(){
+						
+					});
+					// 5.4 修改正在选中的a
+					setA();
+				}
+			}
+			
+			// 6, 设置方法用来选中a
+			function setA(){
+				// 6.1 
+				for(var i = 0; i < allA.length; i++){
+					allA[i].style.backgroundColor = "";
+				}
+				
+				// 6.2 选中的变成黑色
+				allA[index].style.background = "black";
+			};
+		</script>
+	</body>
+</html>

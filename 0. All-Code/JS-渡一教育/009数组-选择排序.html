@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	/*选择排序:通过比较首先选出最小的数放在第一个位置章，然后再起去的数中选择次小的放在第二个位置。以此类推
+	9, 8, 7, 6, 5, 4
+	【注】打擂台法。
+	9, 8, 7, 6, 5, 4  //第一个和后边所有的比较 
+	4, 8, 7, 6, 5, 9  //最小的放第一个位置
+	   5, 7, 6, 8, 9  
+	      6, 7, 8, 9
+	         7, 8, 9
+	            8, 9
+	*/
+   var arr = [9,8,7,6,5,4] 
+   for(var i = 0; i < arr.length-1; i++){
+   		for(var j = i + 1; j < arr.length; j++){
+   			if(arr[i] > arr[j]){
+   				var tmp=arr[i];
+   				arr[i]=arr[j];
+   				arr[j]=tmp;
+   			}
+   		}
+   }
+   alert(arr);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

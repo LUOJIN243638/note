@@ -1,0 +1,16 @@
+{{if age > 18}}
+	年龄大于18
+{{else if age < 15}}
+	年龄小于15
+{{else}}
+     error
+{{/if}}
+
+
+<% if (age > 18) { %> 
+   年龄大于18了
+<% } else if (age < 15) { %> 
+	年龄小于15
+<% } else { %>
+	error
+<% } %>

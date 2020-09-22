@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	/*jquery 版本区别：
+	1.0 可以兼容IE8一下
+	2.0 只兼容IE8以上
+	3.0
+	*/
+	window.onload = function(){
+		//#id
+		$('#div').css("backgroundColor","red");
+		//class
+		$(".box").css("backgroundColor","red");
+
+		//ul 下的所有li标签变成红色
+		$("ul li").css("backgroundColor","green");
+
+		//获取页面上所有name = hello 的元素
+		$("[name=hello]").css("backgroundColor","blue")
+	}
+
+</script>
+<div type="text" name="hello">div</div>
+<ul>
+	<li class="box">1111</li>
+	<li name="hello">1111</li>
+	<li>1111</li>
+	<li class="box">1111</li>
+</ul>
+<ol>
+	<li>11111</li>
+	<li>11111</li>
+	<li>11111</li>
+	<li>11111</li>
+</ol>
+</body>
+</html>

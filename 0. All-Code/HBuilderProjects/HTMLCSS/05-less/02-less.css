@@ -1,0 +1,26 @@
+.box1 {
+  background: yellow;
+}
+.box1 .box2 {
+  background: green;
+}
+.box1 .box2 .box3 {
+  background: blue;
+}
+/*多行，会被解析到css*/
+.box5 {
+  width: 100px;
+  background: red;
+}
+.red {
+  width: 100px;
+  background-image: url("red/1.png");
+}
+div {
+  width: 300px;
+  height: 330px;
+}
+div {
+  width: 300px;
+  height: 300px;
+}

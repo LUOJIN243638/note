@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+	/*window.onload = function(){}*/ 
+	//[注] 再JQ种基本看不到 等号 = ，所有的赋值都是函数传参的操作
+/*	$(function(){
+		alert("相当于window.onload");
+	});*/
+
+   $(function(){
+		//添加一个带点击事件
+		$("h1").click(function(){
+			alert("I am being click!");
+	})
+
+	//后续所有的事件绑定大家都会了，都是一样
+	$("h1").mouseover(function(){
+		this.style.backgroundColor = "red";
+	})
+	$("h1").mouseout(function(){
+		this.style.backgroundColor = "pink";
+	})
+
+});
+
+	</script>
+</head>
+<body>
+	<h1>hello world</h1>
+	<script type="text/javascript">
+		alert("hello!")
+	</script>
+</body>
+</html>

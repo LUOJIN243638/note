@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<span>span</span>
+<div id="div1">div</div>
+<p>p</p>
+<script type="text/javascript">
+	/*var oDiv = document.getElementById('div1');
+	var node = document.createElement("strong");
+	oDiv.parentNode.replaceChild(node,oDiv);*/
+
+	//2,clone
+	var oDiv = document.getElementById('div1');
+	var oSpan = document.getElementsByTagName('span')[0];
+
+	//将div添加到span 前边,这样会覆盖前边的div
+	//oSpan.parentNode.insertBefore(oDiv,oSpan);
+    
+    //通过克隆:不能克隆文本，像克隆文本的话，参数加true；（默认false）
+	var node = oDiv.cloneNode(true);
+	oSpan.parentNode.insertBefore(node,oSpan);
+
+	//3,删除节点 removeNode() 当前被删除节点的父节点，调用它node.parentNode.removeNode()
+
+
+
+
+	
+
+</script>
+</body>
+</html>

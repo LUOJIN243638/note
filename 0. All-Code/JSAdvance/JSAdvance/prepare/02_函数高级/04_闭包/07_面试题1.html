@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>07_面试题1</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  /*
+   说说它们的输出情况
+   */
+
+  //代码片段一
+  // 没有闭包 ，内部函数没有变量
+  var name = "The Window";
+  var object = {
+    name: "My Object",
+    getNameFunc: function () {
+      return function () {
+        return this.name;
+      };
+    }
+  };
+  console.log(object.getNameFunc());  // 一个函数
+  console.log(object.getNameFunc()()); // "The Window"
+  //? 他没有暴露在外边， object.getNameFunc()执行这个函数
+  // 函数体的this = window
+
+  //代码片段二
+  // 有闭包 that
+  var name2 = "The Window";
+  var object2 = {
+    name2: "My Object",
+    getNameFunc: function () {
+      var that = this;
+      return function () {
+        return that.name2;
+      };
+    }
+  };
+  console.log(object2.getNameFunc()()); //?"My Object"
+  // object2.getNameFunc() 执行这个函数
+  //  函数的this =  window
+  //  但是她不用this ，他用的是that = Object2
+  //  that保存的是调用 getNameFunc的this
+  //  调用 getNameFunc的this是Object2 = that
+
+</script>
+</body>
+</html>

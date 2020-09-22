@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 以IE最高版本来兼容 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 引入bootstrap 样式文件 -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .row div{
+            background-color: cornflowerblue;
+            height: 50px;
+        }
+        .row div:nth-child(3){
+            background-color: darkmagenta;
+        }
+        span{
+            font-size: 30px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body> 
+    <div class="container"> 
+        <div class="row">
+            <div class="col-xs-3">
+                <span class="visible-lg">我会显示大屏里</span>
+            </div>
+            <div class="col-xs-3">2</div>
+            <div class="col-xs-3 hidden-md hidden-xs">hahaha</div>
+            <div class="col-xs-3">4</div>
+        </div>
+    </div> 
+</body>
+</html>

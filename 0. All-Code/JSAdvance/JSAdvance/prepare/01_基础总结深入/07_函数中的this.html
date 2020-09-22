@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>07_函数中的this</title>
+</head>
+<body>
+<!--
+1. this是什么?
+  * 任何函数本质上都是通过某个对象来调用的，如果没有就是window
+  * 一个关键字, 一个内置的引用变量
+  * 在函数中都可以直接使用this
+  * this的值代表调用函数的当前对象，
+  * 在定义函数时, this还没有确定, 只有在执行时才动态确定(绑定)的
+2. 如何确定this的值?
+  * test()
+  * obj.test()
+  * new test()
+  * test.call(obj)
+前置知识:
+  * 本质上任何函数在执行时都是通过某个对象调用的
+-->
+
+<script type="text/javascript">
+  function Person(color) {
+    console.log(this)  // 1， 函数 this = 谁调用是谁
+    this.color = color;
+    this.getColor = function () {
+      console.log(this)
+      return this.color;
+    };
+    this.setColor = function (color) {
+      console.log(this)
+      this.color = color;
+    };
+  }
+
+  Person("red"); //this是谁?    1，window 执行所有语句
+
+  var p = new Person("yello"); //this是谁?   2, this是new的对象 p
+
+  p.getColor(); //this是谁?    3, p
+
+  var obj = {};
+  p.setColor.call(obj, "black"); //this是谁?   4, obj
+
+  var test = p.setColor;
+  test(); //this是谁?    5, window  直接嗲用的
+
+  function fun1() {
+    function fun2() {
+      console.log(this);
+    }
+
+    fun2(); //this是谁?   6， window
+  }
+  fun1();
+</script>
+</body>
+</html>

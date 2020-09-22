@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="div1">
+	<em>xieti</em>
+	text content
+	<strong>bold</strong>
+</div>
+
+<script type="text/javascript">
+	/*包扩 空格 换行 回车 tab键 字符 都是字符串*/
+	var oDiv = document.getElementById('div1');
+	//alert(oDiv.childNodes.length);//5
+
+	//[问题] 如何将空白节点去除掉？ --- 识别空白节点
+	// /^s+$/.test()左侧的正则去验证，如果符合返回true
+	/*alert(/^\s+$/.test("     ")); //true
+	alert(/^\s+$/.test("1     ")); //false */
+
+	/*alert(oDiv.childNodes.length); //5
+	var nodes = removeSpaceNode(oDiv.childNodes);
+	alert(nodes.length); //3
+
+	alert(oDiv.childNodes[0].length); //2
+	var nodes = removeSpaceNode(oDiv.childNodes);
+	alert(nodes[0].length); //undefined */
+
+	//1，这是第一种方法，通过removeSpaceNode确实删掉了，但是返回的是一个数组，对于我们原来的chlidNode上的元素节点没有变化
+	//2，通过firstChild lastChild 从父节点上删除元素节点 
+	//为什么要倒着删除呢？顺着删了之后，后边的元素会顶到前边的元素，会跳过这个元素
+	removeSpaceNode2(oDiv);
+	alert(oDiv.childNodes.length);
+	alert(oDiv.firstChild.nodeName);
+
+	function removeSpaceNode2(parent){
+		var nodes = parent.childNodes;
+		for (var i = nodes.length-1; i>= 0; i--){
+    		if(nodes[i].nodeType == 3 && /^\s+$/.test(nodes[i].nodeValue)){
+    		 	parent.removeChild(nodes[i]);
+    	   	}
+    	}
+	}
+	//1，删除空白节点的函数封装
+    function removeSpaceNode(nodes) {
+    	var result = []; //用来存放不是空节点的节点
+    	for (var i = 0; i < nodes.length; i++){
+    		if(nodes[i].nodeType == 3 && /^\s+$/.test(nodes[i].nodeValue)){
+    		 	continue;
+    	   	}
+    		result.push(nodes[i]);
+    	}
+    	return result;
+    }
+
+
+</script>
+
+
+
+
+</body>
+</html>

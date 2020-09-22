@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		/*获取元素节点的方法
+		1，id  docuemnt.getElementById()
+		2, tagName  node.getElementsByTagName()
+		3, name  document.getElementsByName()
+		4, className  document.getElementsByClassName()
+
+		太长了 通过封装一个函数，可以拥有上述几种获取元素节点的功能
+		【注】 CSS选择器 
+		#id  通过 ID 获取元素节点
+		.class  通过className获取元素节点
+		tagName  通过tagName获取元素节点
+		name=XXX  通过name获取元素节点
+		*/
+		
+		function $(vArg){ //由于变量名不确定，随便设置一个
+			//<1> 对参数进行区分,用第一个字母去区分
+			switch(vArg[0]){ 
+				case"#":  //id
+					return document.getElementById(vArg.substring(1)) //处理#
+					break;
+				case".": //className
+					return elementByClassName(document,vArg.substring(1))
+					break;
+				default://对参数的前五个字符，进行判断
+					var str = vArg.substring(0,5);
+					if(str == "name="){ //name
+						return document.getElementsByName(vArg.substring(5))
+					}else{ //tagName
+						return document.getElementsByTagName(vArg);
+					}
+					break;
+			}
+		}
+		function elementByClassName(parent,classStr){// 参数1-哪节点开始去找，参数2-class
+ 			//1，要找到parent下的所有元素节点
+	 		var nodes=parent.getElementsByTagName('*')
+			var result=[];//用来记录所有符合条件的元素节点
+			for(var i = 0; i < nodes.length; i++){
+			//2，如果符合条件，就添加到数组中
+			if(nodes[i].className==classStr){
+				result.push(nodes[i])
+			}
+		}
+		return result;
+	}
+		window.onload=function(){
+			//alert($("#div1").innerHTML);  //id
+			alert($(".box").length);   //className
+			//alert($(".box")[1].innerHTML); //className
+			//alert($("div").length);  //TagName
+			//alert($("name=hello"));   //name
+			//alert($("name=hello").length);  
+		}
+	</script>
+</head>
+<body>
+<div id="div1">1111111</div>
+<div class="box">2222222</div>
+<div class="box">3333333</div>
+<div name="hello">4444444</div>
+</body>
+</html>

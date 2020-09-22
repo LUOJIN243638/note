@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#div1{width: 100px;height: 100px;background-color: red;position:absolute;}
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	
+</head>
+<body>
+<div id="div1">	</div>
+<script type="text/javascript">
+	var oDiv = document.getElementById('div1');
+	//当鼠标按下，要记下相对位置
+	oDiv.onmousedown = function (ev) {
+		var e = ev || window.event;
+		var offsetX = e.pageX - this.offsetLeft; //当前鼠标的位置 - ~
+		var offsetY = e.pageY - this.offsetTop;
+	    //鼠标按下改变位置
+	    document.onmousemove = function(ev){
+	    	var e = ev || window.event;
+	    	oDiv.style.left = e.pageX - offsetX + "px";
+	    	oDiv.style.top = e.pageY - offsetY + "px";
+	    }
+	    document.onmouseup = function(){
+	    	document.onmousemove = null;
+	    }
+	}
+
+</script>
+</body>
+</html>

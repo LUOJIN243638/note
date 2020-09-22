@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		/*节点操作的方法,下述所有方法的参数都是选择器
+		siblings() 用来除当前节点外，所有的兄弟节点
+		nextAll() 当前节点开始往下所有的节点
+		prevAll()
+		parentsUntil() 知道html位置找到父节点
+		nextUntil() 直到什么为止的节点
+		prevUntil()
+		
+		*/
+		$(function () {
+			$("#p1").siblings('h2').css("backgroundColor","red");
+			//写上h2，会将兄弟节点中h2的节点变红
+		})
+		
+	</script>
+</head>
+<body>
+<div id="div1">
+	<h1>h1</h1>
+	<h2>h2</h2>
+	<p id="p1">p</p>
+	<em>em</em>
+	<h3>h3</h3>
+	<strong>strong</strong>
+	<h6>h6</h6>
+	<h2>h2</h2>
+</div>
+</body>  
+</html>

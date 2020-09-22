@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		var n = parseInt(window.prompt("input"));
+		/*
+			2 
+			2 * 2
+			2 *2 *2 
+			每次都是上一次结果 * 2
+			1 * 2 
+			1 * 2 * 2
+			1 * 2 *2 *2 
+		*/
+		var mul = 1; 
+		for(var i = 0; i < n; i ++){
+			mul *= 2; 
+		}
+		document.write(mul);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

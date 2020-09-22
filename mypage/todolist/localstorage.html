@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        var todolist = [{
+            title: 'toeic speaking',
+            done: false
+        },{
+            title: 'jquery',
+            done: false
+        },];
+        localStorage.setItem("todo",JSON.stringify(todolist));
+        // 1, 本地存储只能存储字符串的数据格式,我们的数组不能直接存，把数组对象转换为字符串格式
+        // JSON.stringify()
+        var data = localStorage.getItem("todo");
+        // console.log(typeof data); //string
+        // console.log(data[0].title); // undefined 因为字符串没有title属性
+        //2，获取本地存储的数据，我们需要把里面的字符串数据转换 对象格式 JSON.parse()
+        data  = JSON.parse(data);  
+        console.log(data); // 还是我们的数组
+        console.log(data[0].title); //okay了
+    </script>
+</body>
+</html>

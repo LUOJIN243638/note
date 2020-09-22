@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#outer{width: 200px; height: 200px; background-color: red;}
+		#inner{width: 100px; height: 100px; background-color: green;}
+	</style>
+</head>
+<body>
+<div id="outer">
+	<div id="inner"></div>
+</div>
+<script type="text/javascript">
+	var outer = document.getElementById('outer');
+	var inner = document.getElementById("inner");
+	/*inner.addEventLisener("click",baz,false); //2, false 改成true 会先输出outer1，在输出inner
+	outer.addEventLisener("click",foo,false); //1
+	outer.addEventLisener("click",bar,false);
+	outer.removeEventLisener("click",foo)
+	outer.removeEventLisener("click",bar)
+	//outer.onclick = foo;
+	//outer.onclick = bar;
+	//outer.click = null;
+
+	outer.attachEvent("onclick",foo);
+	outer.detachEvent("onclick",foo);*/
+
+	function foo(){
+		console.log("outer1");
+	}
+	function bar(){
+		console.log("outer2"); 
+	} //两个同时输出，以前的同时添加两个，后一个会覆盖前边的
+	function baz(){
+		console.log("inner");  //inner outer1 
+	}
+
+//兼容性处理函数
+function addEvent(obj,type,fun){
+	if(obj.addEventLisener){
+		obj.addEventLisener(type,fun,false);
+	}else{
+		obj.attachEvent("on" + type, fun);
+	}
+}
+function removeEvent(obj,type,fun){
+	if(obj.removeEventLisener){
+		obj.removeEventLisener(type,fun,false);
+	}else{
+		obj.detachEvent("on"+type,fun);
+	}
+}
+addEvent(outer,"click",foo);
+removeEvent(outer,"click",foo);
+
+
+
+</script>
+
+
+
+</body>
+</html>

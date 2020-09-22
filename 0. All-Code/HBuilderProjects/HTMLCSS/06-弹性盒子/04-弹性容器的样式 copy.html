@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        ul{
+            width: 800px;
+            border: 10px solid red;
+            /* 设置为弹性容器 */
+            display: flex;  
+
+            /* align- items:元素再辅轴上如何对齐
+            元素间的关系
+            
+            stretch 长度一样
+            flex-start 沿着起边对齐 /~end/
+            center
+            baseline延基线对齐
+
+            
+            align-content: 辅助空白空间分布;
+
+            align-self: strech;
+            */
+
+            /* //水平垂直居中 */
+            justify-content: center;
+            align-items: center; 
+
+        }
+        li{
+            width: 200px;
+            /* height: 100px; */
+            background-color: royalblue;
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+
+            flex-shrink:0;
+        }
+        li:nth-child(2){
+            background-color: aqua
+        };
+        li:nth-child(3){
+            background-color: salmon;
+        }
+        li:nth-child(4){
+            background-color: red;
+        }
+        li:nth-child(5){
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <!-- flex: 弹性盒，伸缩盒，元素根页面大小改变
+    布局手段，主要用来代替浮动完成布局
+
+    弹性容器：
+        --要使用弹性盒，必须将元素设置为弹性容器
+        --display:flex(用得多)/inline-flex;
+
+    弹性元素：
+        --弹性容器的直接子元素自动是弹性元素
+        --一个元素可以同时是弹性容器和弹性元素
+    -->
+<ul>
+    <li>1</li>
+    <li>2
+        <div>2</div>
+    </li>
+    <li>3
+        <div>3</div>
+        <div>3</div>
+    </li>
+    <li>1</li>
+    <li>1</li>
+</ul>
+
+    
+</body>
+</html>

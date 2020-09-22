@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/*清除页面默认样式*/
+			*{margin:0;padding:0;}
+			
+			/*统一页面字体*/
+			body{font: 12px/1 宋体;}
+			
+			/*设置outer的大小*/
+			.outer{
+				width: 300px;
+			/* 	height: 473px;
+				background-color: #bfa; */
+				/*设置outer的居中效果*/
+				margin: 50px auto;
+			}
+			
+			/*设置title的边框*/
+			.title{
+				height: 36px;
+				border-top: 2px #019e8b solid;
+				background-color: #DDDDDD;
+				/* 让行高=父元素的高，就垂直居中了*/
+				line-height: 36px;
+				/* 左内边距，右内边距*/
+				padding: 0px 22px 0px 16px;
+			}
+			
+			/*设置title中超链接的左浮动，
+			我们的a表象上边是一个块元素，
+			行内元素浮动不会超过块元素
+			，所以浮动过去在他的下边
+			【解决办法】让近期开班也浮动，或者两个标签换位置*/
+			.title a{
+				float: right;
+				/*设置超链接字体颜色*/
+				color: red; 
+			}
+			.title h3{
+				font: 16px/36px "微软雅黑";
+					
+			}
+			
+			/*设置内容*/
+			.content{
+				border: 1px solid #deddd9;
+				/*设置内边距，左右，上下不要*/
+				padding: 0 28px 0 20px;
+				
+			}
+			
+			/*给每个标题设置一个外边距*/
+			.content h3{
+				margin-top: 14px;
+				margin-bottom: 14px;
+			}
+			/*设置内容中的li*/
+			.content li{
+				margin-bottom: 15px;
+			}
+			
+			/*给每一个ul下设置一个低边框*/
+			.content ul{
+				border-bottom: 1px dashed #808080;
+			}
+			.content .no-border{
+				border: none;
+			}
+			
+			/*设置内容中的超链接*/
+			.content a{
+				color: black;
+				text-decoration: none;
+				font-size: 12px;
+			}
+			
+			/*为超链接加一个hover*/
+			.content a:hover{
+				color: #FF0000;
+				text-decoration: underline;
+			}
+			
+			/*设置a右侧的样式*/
+			.content .right{
+				float: right;
+			}
+			
+			/*设置ul格式*/
+			ul{
+				list-style: none;
+			}
+			.content .red{
+				color: red;
+				font-weight: bold;
+			}
+			
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<!--创建一个外层div,容纳整个内容-->
+		<div class="outer">
+			
+			<!--开班信息的头部-->
+			<div class="title">
+				<a href="#">16年面授开班计划</a>
+				<h3>近期开班</h3>
+			</div>	
+			<!--开班信息的主要内容-->
+			<div class="content">
+				<a href="#"><h3>JavaEE + 云计算-全程就业班</h3></a>
+				<ul>
+					<li>
+						<a href="#" class="right"><span class="red">预约报名</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+					<li>
+						<a href="#" class="right"><span class="red">人满啦</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+					<li>
+						<a href="#" class="right"><span>开办盛况</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+					<li>
+						<a href="#" class="right"><span>开办盛况</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+					<li>
+						<a href="#" class="right"><span>开办盛况</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+				</ul>
+				
+				<a href="#"><h3>Android + 人工只能 + 全程就业班</h3></a>
+				<ul>
+					<li>
+						<a href="#" class="right"><span class="red">预约报名</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+					<li>
+						<a href="#" class="right"><span>开办盛况</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+					<li>
+						<a href="#" class="right"><span>开办盛况</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+					<li>
+						<a href="#" class="right"><span>开办盛况</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+				</ul>
+				
+				<a href="#"><h3>前端 + HTML + 全程就业班</h3></a>
+				<ul class="no-border">
+					<li>
+						<a href="#" class="right"><span class="red">预约报名</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+					<li>
+						<a href="#" class="right"><span>开办盛况</span></a>
+						<a href="#">开版时间：<span class="red">2016-04-07</span></a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	</body>
+</html>

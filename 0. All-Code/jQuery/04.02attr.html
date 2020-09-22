@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+		/*
+		attr 设置和修改行间属性
+
+		*/
+
+   $(function(){
+   		//获取元素
+   		alert($("#div1").attr("id")); 
+   		alert($("#div1").attr("title"));
+   		alert($("#div1").attr("class"));
+
+   		//设置属性值  
+   		$("#div1").attr("title","world");
+
+   		//一次性修改多条属性
+   		$("#div1").attr({
+   			title:"world",
+   			class:"cccc",
+   			yyy:"zzz"
+   		})
+
+   	}); 
+
+
+	</script>
+</head>
+<div id="div1" title="hello" class="box">	div1</div>
+</body>
+</html>

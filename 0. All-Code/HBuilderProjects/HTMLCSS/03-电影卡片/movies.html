@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/fa/css/all.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<style>
+			.outer{
+				width: 240px;
+				margin: 110px auto;
+				box-shadow: 0 0 10px rgba(0,0,0,.3);
+				
+			}	
+			.img-wrapper img{
+				width: 100%;
+				vertical-align: bottom;
+			}
+			.info{
+				padding: 0 18px;
+				
+				color: #acaaaa;
+				font-size: 14px;
+			}
+			
+			.info .title{
+				color: #717171;
+				font-size: 18px;
+				margin: 13px 0 15px 0;
+			}
+			.info .category{
+				/* color: #acaaaa;
+				font-size: 14px; */
+				margin-left: 4px;
+				margin-right: 7px;
+			}
+			.info .intro{
+			/* 	color: #acaaaa;
+				font-size: 14px; */
+				
+				margin-top: 20px;
+				margin-left: 4px;
+				line-height: 20px;
+				margin: 18px 4px;
+			}
+			
+			.star-wrapper{
+				line-height: 46px;
+				height: 46px;
+				border-top: 1px solid #E9E9E9;
+				color: #ddd;
+				padding: 0 16px;
+			}
+			.star-wrapper .light{
+				color: #b9cb41;
+			}
+			
+			.star{
+				float: left;
+				
+			}
+			.star-wrapper .weibo{
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 外层容器 -->
+		<div class="outer">
+			<!-- 图片容器 -->
+			<div class="img-wrapper">
+				<!-- 设置图片 -->
+				<img src="./1.jpg" >
+			</div>
+			<!-- 创建内容 -->
+			<div class="info">
+				<h2 class="title">
+					<i class="fas fa-map-marked-alt"></i>
+					Animation film</h2>
+				<h3 class="category">Animation</h3>
+				<p class="intro">
+					This is a great film!
+				</p>
+			</div>
+			<!-- 创建评分容器 -->
+			<div class="star-wrapper">
+				<ul class="star">
+					<li class="fas fa-star light"></li>
+					<li class="fas fa-star light"></li>
+					<li class="fas fa-star"></li>
+					<li class="fas fa-star"></li>
+				</ul>
+				
+				<ul class="weibo">
+					<li class="fas fa-weibo"></li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		
+	</body>
+</html>

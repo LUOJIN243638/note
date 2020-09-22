@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 100px;height: 100px;}
+		#div1{background-color: red;}
+		#div2{background-color: blue;}
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		/*animate() 默认运动形式：慢快慢"swing"； 
+		匀速：linear*/
+		 $(function () {
+	/*		$("#div1").hover(function(){
+				$("#div2").animate({
+					width:300,
+					height:300,
+					opacity: 0.5	
+ 				},4000, function() {
+					$("#div1").html("移入");
+				})
+			}, function(){
+			$("#div2").animate({
+					width:200,
+					height:200,
+					opacity: 1	
+			},4000, function() {
+				$("#div1").html("移出");
+		 		})
+			})*/
+
+			$("#div1").click(function(){
+				$("#div1").animate({
+					width:300,
+					height:300,
+ 				},4000, "linear");
+ 				$("#div2").animate({
+ 					width:300,
+ 					height:300,
+ 				},4000)
+			})
+		})
+	</script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>  
+</html>

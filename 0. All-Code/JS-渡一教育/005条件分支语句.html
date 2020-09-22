@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//1.判断那个数大
+		var num1=100;
+		var num2=300;
+		var max=null;//如果不知道赋值什么，就赋值为null；
+		if (num1>num2) {
+			var max=num1;
+		}
+		else{
+			var max=num2;
+		}
+		alert("两个数中最大的是"+max);
+
+
+
+
+		//2,判断是不是偶数
+		var num=20;
+	    if (num%2==0) {
+	    	alert("even");
+	    }
+	    else{
+	    	alert("奇数");
+	    }
+
+
+		//3,判断是不是闰年；
+		/*
+			条件：
+			1，可以被400整除
+			2，可以被4整除但是不能被100整除
+		*/
+		var year=2000;
+		if (year%400==0 || year%4==0 && year%100!=0){
+			alert('闰年');
+		}else{
+			alert("平年");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

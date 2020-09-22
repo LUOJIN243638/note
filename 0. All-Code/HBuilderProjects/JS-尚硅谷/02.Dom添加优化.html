@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<style type="text/css">
+		#employeeTable{
+			border: 1px solid green;
+		}
+		#FormDiv{
+			border: 1px solid darkred;
+			margin-top: 40px;
+			padding-bottom: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		function delA(){
+			//alert("add success!"); 
+			/* 点击超链接 ，会跳转页面404：这是超链接的默认行为
+			清除默认行为： return false
+			或者在超链接后边写上href = javascrippt:;"
+			*/
+		   
+		   
+		   //点击超链接，删除所在的那行; 响应事件函数 --给谁绑定THIS 就是谁 这个this=a
+		   //alert(this);
+		   //通过a 获取tr 删除它 a的父亲的父亲就是tr
+		   //获取当前<tr></tr>
+		   var tr = this.parentNode.parentNode;
+		   
+		   
+		   //获取删除员工的名字
+		   //var DelName = tr.children[0].innerHTML;
+		    var DelName = tr.getElementsByTagName("td")[0].innerHTML;
+		   /*
+			删除之前弹出带有确认和取消的提示框，用户点确定在执行删除代码 
+			confirm（）点击会返回ture 否则返回false
+			*/
+		   var flag = confirm("are u sure to delete" + DelName +  "?");
+		   
+		   
+		   //如果用户确认删除
+		   if(flag){
+			    tr.parentNode.removeChild(tr);
+		   }
+		  
+			return false;
+		
+			
+		}
+		
+		window.onload = function(){
+			// 1，点击超链接，删除员工信息 给美国超链接 绑定单机单数
+			
+			//获取所有超链接
+			var allA = document.getElementsByTagName("a");
+			
+			//为每个超链接添加单机响应函数
+			for(var i = 0; i < allA.length; i++){
+				allA[i].onclick = delA;
+				}
+			
+			
+			// 2. 添加新员工的功能 点击按钮，添加到表格中
+			//为提交按钮添加一个点击绑定事件,
+			var addEmpButton = document.getElementById("addEmpButton");
+			addEmpButton.onclick = function(){
+				/*  alert("hello");
+			在这里提交按钮没有放在表单里，所以不需要取消默认事件，如果把他放在表单里，不哟啊忘了取消默认事件
+				*/
+			   
+			   //2.1 获取员工信息
+			   var name = document.getElementById("empName").value;
+			   var email = document.getElementById("email").value;
+			   var salary = document.getElementById("salary").value;
+			   
+			   //2.2 将员工的信息保存在这样一个<tr></tr>中
+			   /* <tr>
+					<td>Tom</td>
+					<td>Tom@tom.com</td>
+					<td>5000</td>
+					<td><a href="deleteEmp?id=001">Delete</a></td>
+				</tr>
+				*/
+				// 2.2.1 创建<tr></tr>
+				var tr = document.createElement("tr");
+				
+				//设置tr中的内容
+				tr.innerHTML = "<td>" + name + "</td>"+
+				"<td>" + email + "</td>"+
+				"<td>" + salary + "</td>"+
+				"<td><a href = 'javascript:;'>Delete</a></td>";
+				
+				
+				//
+				var a = tr.getElementsByTagName("a")[0];
+				a.onclick = delA;
+				
+				//2.5 获取table
+				var employeeTable = document.getElementById("employeeTable");			
+				// 想添加到tbody 里边。
+				//获取employeeTable中的<tbody>
+				var tbody = employeeTable.getElementsByTagName('tbody')[0];
+					
+				//2.5.1 tr添加到table中
+				tbody.appendChild(tr);
+				
+			}		
+		}
+	</script>
+</head>
+<body>
+	<table border="1" id="employeeTable" cellspacing="0" cellpadding="8">
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Salary</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td>Tom</td>
+			<td>Tom@tom.com</td>
+			<td>5000</td>
+			<td><a href="deleteEmp?id=001">Delete</a></td>
+		</tr>
+		<tr>
+			<td>Rom</td>
+			<td>Rom@tom.com</td>
+			<td>56600</td>
+			<td><a href="deleteEmp?id=002">Delete</a></td>
+		</tr>
+		<tr>
+			<td>Yom</td>
+			<td>Yom@tom.com</td>
+			<td>65000</td>
+			<td><a href="deleteEmp?id=003">Delete</a></td>
+		</tr>
+	</table>
+	
+	<div id="FormDiv">
+		<h4>添加新员工</h4>
+		<tr>
+			<td class="word">name: </td>
+			<td class="inp">
+				<input type="text" name="empName" id="empName" value="" />
+			</td>
+		</tr>
+		<tr>
+			<td class="word">email: </td>
+			<td class="inp">
+				<input type="text" name="email" id="email" value="" />
+			</td>
+		</tr>
+		<tr>
+			<td class="word">salary: </td>
+			<td class="inp">
+				<input type="text" name="salary" id="salary" value="" />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<button id="addEmpButton" value="abc">
+					Submit
+				</button>
+			</td>
+		</tr>
+	</div>
+</body>
+</html>

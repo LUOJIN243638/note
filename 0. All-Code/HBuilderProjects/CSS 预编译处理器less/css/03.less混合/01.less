@@ -1,0 +1,27 @@
+//定义混合，加（）不能被编译出来，因为没有传参数
+.juzhong(){
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	background: blue;
+	height: 100px;
+	width: 100px;
+}
+
+#wrap{
+	position: relative;
+	width: 300px;
+	height: 400px;
+	border: 1px solid;
+	margin:0 auto;
+	.inner{
+		//调用混合
+		.juzhong;
+	}
+	.inner2{
+		.juzhong;
+	}
+}

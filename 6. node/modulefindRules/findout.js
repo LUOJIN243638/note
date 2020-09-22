@@ -1,0 +1,1 @@
+console.log("modulefindRules 的文件夹下的find.js被引用了！！！1");

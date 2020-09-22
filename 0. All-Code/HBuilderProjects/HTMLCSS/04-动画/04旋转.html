@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			html{
+				perspective: 800px;
+			}
+			body{
+				border: 1px red solid;
+				background-color: #B3D4FC;
+			}
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: #666666;
+				margin: 200px auto;
+				transition: 2s;
+			}
+			body:hover .box1{
+				/* 通过旋转使元素再XYZ轴旋转 */
+				backface-visibility: hidden;
+				transfrom:rotateZ(180deg);
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+	</body>
+</html>

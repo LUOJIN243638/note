@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4445594f-6c24-4b31-963a-6bf60215ffd2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="VueJS" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bHyayVvw7nYQowcAtkpTLlNJPd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vueDemo" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\All-Code\HBuilderProjects\VueJS\vueDemo" />
+      <recent name="C:\All-Code\HBuilderProjects\VueJS\vueDemo\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\All-Code\HBuilderProjects\VueJS\vueDemo\static\users_page" />
+      <recent name="C:\All-Code\HBuilderProjects\VueJS\vueDemo\static\css" />
+      <recent name="C:\All-Code\HBuilderProjects\VueJS\basic" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4445594f-6c24-4b31-963a-6bf60215ffd2" name="Default Changelist" comment="" />
+      <created>1588303380087</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588303380087</updated>
+      <workItem from="1588303382734" duration="18224000" />
+      <workItem from="1588341216836" duration="2423000" />
+      <workItem from="1588396992404" duration="14344000" />
+      <workItem from="1588490813796" duration="5095000" />
+      <workItem from="1588564083120" duration="3914000" />
+      <workItem from="1588642539966" duration="22826000" />
+      <workItem from="1588733638657" duration="36315000" />
+      <workItem from="1588905857118" duration="44000" />
+      <workItem from="1589025089783" duration="1241000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="801" y="176" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588407629791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="801" y="176" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1588407629791" />
+    <state x="368" y="9" key="SettingsEditor" timestamp="1588410337477">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="368" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588410337477" />
+    <state x="727" y="108" width="633" height="558" key="find.popup" timestamp="1588398870419">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="727" y="108" width="633" height="558" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1588398870419" />
+    <state x="721" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1588814243798">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="721" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1588814243798" />
+  </component>
+</project>

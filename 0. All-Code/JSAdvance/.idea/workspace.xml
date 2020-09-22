@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="47f19b48-cd66-4d8e-a297-5255c9c2482e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1bAM96crAoZ5vytGvYJmL1Wxjll" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HBuilderProjects/VueJS" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\All-Code\JSAdvance\JSAdvance\prepare\03_对象高级\02_继承模式" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="47f19b48-cd66-4d8e-a297-5255c9c2482e" name="Default Changelist" comment="" />
+      <created>1588070289889</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588070289889</updated>
+      <workItem from="1588070293999" duration="4600000" />
+      <workItem from="1588114660315" duration="12672000" />
+      <workItem from="1588173184768" duration="2870000" />
+      <workItem from="1588210781963" duration="5270000" />
+      <workItem from="1588242959972" duration="837000" />
+      <workItem from="1588248025009" duration="7735000" />
+      <workItem from="1588303355928" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588217875159">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1588078899209" />
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1588217875159" />
+    <state x="674" y="119" key="FileChooserDialogImpl" timestamp="1588303377732">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="674" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588303377732" />
+    <state x="450" y="0" width="916" height="708" key="SettingsEditor" timestamp="1588146188814">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="450" y="0" width="916" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588146188814" />
+    <state x="644" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1588250222750">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="644" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1588250222750" />
+    <state x="644" y="52" width="672" height="716" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1588215585265" />
+  </component>
+</project>

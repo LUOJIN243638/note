@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#outer{width: 200px; height: 200px; background-color: red;}
+		#inner{width: 100px; height: 100px; background-color: green;}
+	</style>
+</head>
+<body>
+<div id="outer">
+	<div id="inner"></div>
+</div>
+事件流：页面接受时间的顺序 三阶段：捕获，目标，冒泡
+阻止冒泡
+利用时间冒泡原理，把本来应该添加给某元素上的时间委托给他的父级（外层）
+<script type="text/javascript">
+	var outer = document.getElementById('outer');
+	var inner = document.getElementById("inner");
+	outer.onclick = function(){
+		console.log("outer"); 
+	}
+	inner.onclick = function(e){
+		var evt = e || window.event;
+		console.log("inner"); 
+		//1，点绿色区域会输出两个（冒泡：特定目标-最不特定目标）
+		//2，点绿色不想让红色也输出的话？需要阻止冒泡
+		evt.cancelBubble = true; //两者都适用
+		//evt.stopProgagation(); //现在浏览器
+	}
+	
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

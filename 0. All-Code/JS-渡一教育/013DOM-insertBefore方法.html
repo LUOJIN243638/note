@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="009数组-tool.js"></script>
+</head>
+<body>
+	insertBefore() 注:父节点.insertBefore(要插入的节点，[那个节点之前]旧节点)
+	<div id="div1"> <p>p</p> <span>span</span> <em></em></div>
+	<script type="text/javascript">
+	 	//1,创建一个strong节点，将这个节点插入到span之前
+		var node = createElementWidthTxt("strong","strong text content");
+		var oSpan = document.getElementsByTagName('span')[0];
+		//2，进行插入
+		//oSpan.parentNode.insertBefore(node,oSpan);
+
+		insertAfter(node,oSpan);
+
+// DOM 里封装insertAfter()这个方法
+function insertAfter(newNode, oldNode){
+	//判断这个oldNode 是不是最后一节点
+	var parent = oldNode.parentNode; //获取父节点
+	if(oldNode == parent.lastChild){
+		//最后一个节点，直接插入到子节点的末尾
+		parent.appendChild(newNode);
+	}else{
+		//插入到oldNode的下一个节点之前
+		parent.insertBefore(newNode, oldNode.nextSibling);
+	}
+}
+
+
+
+
+
+	</script>
+
+	
+
+</body>
+</html>

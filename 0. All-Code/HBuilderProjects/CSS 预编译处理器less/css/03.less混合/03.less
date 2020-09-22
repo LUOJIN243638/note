@@ -1,0 +1,28 @@
+//混合，不是函数 mix in 
+.juzhong(@w:10px,@h:10px,@c:pink){
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	background: @c;
+	height: @h;
+	width: @w;
+}
+
+#wrap{
+	position: relative;
+	width: 300px;
+	height: 400px;
+	border: 1px solid;
+	margin:0 auto;
+	.inner{
+		//调用混合
+		.juzhong(100px,100px,red);
+	}
+	.inner2{
+		//只传两个参数会报错，因为实参和形参对不上，但是给形参默认值就好了
+		.juzhong( );
+	}
+}

@@ -1,0 +1,16 @@
+/*设置body*/
+body{
+	/*设置水平方向的平铺*/
+	background:url(../images/bd-bg.png) repeat-x;
+	}
+	
+/*固定元素和居中,以后谁想用这个宽度和居中,就给他的class加 w就可以了*/
+.w{
+	width: 940px;
+	margin: 0 auto;
+}
+
+.header{
+	background-color: #bfa;
+	padding: 30px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position: absolute;
+			}
+			#box2{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+				position: absolute;
+				top: 200px;
+				left: 400px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var box1 = document.getElementById("box1");
+				var box2 = document.getElementById("box2");
+				//1, 鼠标按下事件
+				box1.onmousedown = function(event){
+					//4. 解决问题：div的水平偏移量： clientX - 元素.offsetLeft
+					
+					//5，设置box1的捕获事件,松开就不要捕获了,chorm 不行
+					// if(box1.setCapture){
+					// 	box1.setCapture();
+					// }
+					box1.setCapture && box1.setCapture();
+					
+					event = event || window.event;
+					var ol = event.clientX - box1.offsetLeft;
+					var ot = event.clientY - box1.offsetTop;
+					
+					// 2， 跟着移动事件
+					document.onmousemove = function(event){
+							event = event || window.event;
+							//获取鼠标坐标
+							var left = event.clientX - ol;
+							var top = event.clientY - ot;
+							
+							// 修改box1的位置
+							box1.style.left = left + "px";
+							box1.style.top = top + "px";
+							
+					}
+					//3,鼠标松开
+					document.onmouseup = function(){
+	
+						document.onmousemove = null;
+						document.onmouseup = null;
+						box1.releaseCapture && box1.releaseCapture();
+					}
+					return false;
+					//4, 问题：希望鼠标指针的位置不会变 控制元素位置
+				}	
+				
+				/* 
+				 当我们拖拽一个网页中内容，浏览器会自动搜索，此时 会拖拽
+				 功能异常
+				 不希望发生，可以取消这个浏览器的默认行为
+				 return false; 对ie8 X
+				 
+				 setCapture(); 对鼠标按下事件进行捕获
+					- 当调用元素这个方法以后，将会把下一次所有的鼠标按下
+					  事件都弄在自己身上
+				 */
+			}
+		</script>
+	</head>
+	<body>
+		我是一段文字，选中文字，浏览器有一个特点，可以搜索他
+		<div id="box1">
+			
+		</div>
+		<div id="box2">
+			
+		</div>
+	</body>
+</html>

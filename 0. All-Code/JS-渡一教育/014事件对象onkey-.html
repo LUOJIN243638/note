@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	document.onkeypress = function(){ //onkeypress按下字符键触发函数执行
+		console.log("keypress");
+	}
+	document.onkeydown = function(){ //  onkeydown按下任意键
+		console.log("keydown");
+	}  //altKey , ctrlKey, shiftKey 
+	document.onkeydown = function(e){
+		var evt = e || window.event;
+		console.log(evt.altKey,evt.shiftKey,evt.ctrlKey);//按那个那个是true
+		console.log(evt.keyCode); //知道按了哪个键
+	}
+</script> 
+</body>
+</html>

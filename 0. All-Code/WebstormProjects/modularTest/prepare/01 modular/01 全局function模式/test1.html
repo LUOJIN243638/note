@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>01 全局function模式</title>
+	</head>
+	<body>
+		<script type="text/javascript" src="module1.js">
+			<!-- 引入了JS文件这里能直接用 -->
+			foo();
+			bar();
+			<!-- 如果你忘啦，开发周期太长了，再写一个msg,他会变-->
+			msg = "NBA"; 
+			foo();
+			<!-- 这样的化容易造成命名冲突，现在的会把之前的污染了。 -->
+			
+		</script>
+	</body>
+</html>

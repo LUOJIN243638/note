@@ -1,0 +1,658 @@
+/*内容始终居中显示的,以后需要居中的地方给他加
+class="main"=版心
+需要的时候,调用就可以了*/
+.main{
+	width: 1200px;
+	margin: 0 auto; 
+}
+img{display: block;}
+li{list-style: none;}
+a{text-decoration: none;color: #000}
+input{border: none;}
+
+.fl{float: left;}
+.fr{float: right;}
+.clearFixed:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* 头部 */
+.header{
+	height: 160px;
+	/* background-color: red; */
+}
+.header .h_top{
+	height: 40px;
+	background: #32373e;
+}
+.header .h_top .topCon{
+	width: 1200px;
+	height: 40px;
+	/* background: pink;*/
+	/* margin: 0 auto; */
+}
+.header .h_top .topCon .conLeft{
+	/* width: 400px; 让内容撑起来*/
+	height: 40px;
+	/* background: red; */ 
+	/* float: left; */
+	line-height: 40px;
+}
+.header .h_top .topCon .conLeft .leftTxt1 .logo{
+	font-size: 22px;
+	color: #42CF73;
+	margin-right: 32px;
+}
+.header .h_top .topCon .conLeft .leftTxt1 .city{
+	font-size:12px;
+	color: #00B38A;
+	margin-right: 14px;
+}
+.header .h_top .topCon .conLeft .leftTxt1 .city1{
+	font-size:12px;
+	color: #afb5c0;
+	margin-right: 36px;
+}
+
+.header .h_top .topCon .conLeft .ulList{
+	/* background: orange;  */ 
+	font-size: 14px;
+}
+.header .h_top .topCon .conLeft .ulList li{
+	float: left;
+	/*这里给一个,他的父元素会高度塌陷*/
+	width: 70px;
+	text-align: center;
+} 
+.header .h_top .topCon .conLeft .ulList li a{
+	color: #a3b5a7;
+}
+.header .h_top .topCon .conLeft .ulList li:first-child{
+	background: #24282c;
+}
+.header .h_top .topCon .conLeft .ulList li:first-child a{
+	color: #fff;
+}
+
+/* 头部上半部分的右边 */
+.header .h_top .topCon .conRight{
+	/* width: 300px; 让内容撑起来*/
+	height: 40px;
+	/* background: skyblue; */
+	/* float: right; */
+}
+.header .h_top .topCon .conRight .ulList{
+	line-height: 40px;
+	/* background:red; */
+	font-size: 12px;
+}
+.header .h_top .topCon .conRight .ulList li{
+	float: left;
+}
+.header .h_top .topCon .conRight .ulList li a{
+	/* background: gold; */
+	display: block;
+}
+.header .h_top .topCon .conRight .ulList li a.login span{
+	background-position: -9px -32px;
+	margin-right: 10px;	
+}
+.header .h_top .topCon .conRight .ulList li a.login{
+	color: #93b5c0;
+}
+
+.header .h_top .topCon .conRight .ulList li a.btn span{
+	float: left;
+	width: 18px;
+	height: 18px;
+	background-image: url(../img/sprite.png);
+	background-repeat: no-repeat;
+	background-size: 60px 106px;
+	/* background-color: green; */
+	margin-top: 10px;  
+}
+.header .h_top .topCon .conRight .ulList li a.app span{
+ 	background-position: -33px -32px;
+ }
+.header .h_top .topCon .conRight .ulList li a.app{
+	color: #08d7a2;
+	margin-right: 24px ;
+}
+.header .h_top .topCon .conRight .ulList li .login2{
+	margin-right: 40px;
+	color: #93b5c0;
+}
+.header .h_top .topCon .conRight .ulList li .login2 span{
+	 padding: 0 12px;
+}
+.header .h_top .topCon .conRight .ulList li:last-child{
+	margin-right: 8px;
+}
+.header .h_top .topCon .conRight .ulList li:last-child a{
+	color: #93b5c0;
+}
+   
+
+.header .h_bottom{
+	height: 120px;
+	background: #00b38a;
+}
+.header .h_bottom .botCon{
+	width: 1200px;
+	height: 120px;
+	/* background: blue; */
+	/* margin: 0 auto; */
+}
+
+
+/*头部的下半部分的左边*/
+.header .h_bottom .botCon .conLeft{
+	position: relative;
+	width: 566px;
+	height: 120px;
+	background: url(../img/second-hands.png) no-repeat;
+	/* float: left; */
+	background-size: 28%;
+}
+.header .h_bottom .botCon .conLeft .imgBox{
+	position: absolute;
+	top: 32px;
+	left: 232px;
+}
+.header .h_bottom .botCon .conLeft .txtBox{
+	position: absolute;
+	top: 76px;
+	left: 232px;
+	color: white;
+}
+.header .h_bottom .botCon .conRight{
+	width: 454px;
+	height: 120px;
+	/* background: pink; */
+	/* float: right; */
+	font-size: 12px;
+	position: relative;
+}
+ .header .h_bottom .botCon .conRight .btnBox{
+	position: absolute;
+	height: 35;
+	width: 100%;
+	/* background-color: red; */
+	top: 50%;
+	margin-top: -18px;
+	color: #757575;
+	font-size: 12px;
+ }
+  .header .h_bottom .botCon .conRight .btnBox .txt1{
+	  width: 163px;
+	  height: 36px;
+	  /* border: none; */
+	  margin-right: 25px;
+	  text-indent: 10px;
+  }
+   .header .h_bottom .botCon .conRight .btnBox .pBtn{
+	   width: 148px;
+	   height: 38px;
+	   /* background: gold; */
+	   margin-right: 12px;
+	   background-color: #fff;
+   }
+   .header .h_bottom .botCon .conRight .btnBox .txt2{
+	   width: 94px;
+	   height: 36px;
+	   text-indent: 10px;
+   }
+   .header .h_bottom .botCon .conRight .btnBox .pBtn .aTxt2{
+	   padding: 6px 4px 9px;
+	   color: #00B38A;
+   }
+   .header .h_bottom .botCon .conRight .btnBox .btnSub{
+		width: 106px;
+		height: 36px;
+		border: 1px solid #ccefe7;
+		background: transparent;
+		color: #CCEFE7;
+	}
+	
+	
+/*search part start*/	
+.sear{
+	height: 132px;
+	background: #f2f5f4;
+}
+.sear .searCon{
+	/* background-color: red; */
+	height: 102px; /*保证这里高度不变132-30*/
+	padding-top: 30px;
+}
+.searCon .search{
+	width: 937px;
+	height: 47px;
+	/* background: pink; */
+	margin-left: 133px;
+}
+.searCon .search .searchInp{
+	width: 784px; /*内边距设为10,这里剪掉10 794-10*/
+	height: 43px;
+	border: 1px solid #e8e8e8;
+	/* float: left; */
+}
+.searCon .search .btn{
+	width: 141px; /*937-794*/
+	height: 47px; /*父级元素一样*/
+	background: #00B38A;
+	/* float: left; */
+	line-height: 47px;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}
+
+.searCon .searList{
+	/* background: gold; */
+	margin-left: 133px;
+	font-size: 12px;
+	height: 38px;
+	line-height: 38px;
+}
+.searCon .searList  li{
+	float: left;  /*浮动以后,金色不见了,是因为父元素高度塌陷了,给父清除浮动*/
+}
+.searCon .searList li:first-child a{
+	color: #778ab9;
+	padding: 0px;
+}
+.searCon .searList li a{
+	color: #00c1cc;
+	padding: 0px 11px;
+}
+
+
+/*banner part*/
+.bannCon{
+	/* height: 430px; */
+	/* background: pink; */
+	padding-top: 46px;
+}
+.bannCon .banLeft{
+	width: 300px; 
+	/* height: 430px; *//*=父级的高度*/
+	/* background: skyblue; */
+}
+.bannCon .banLeft .banList{
+	font-size: 12px;
+	
+}
+.bannCon .banLeft .banList li{ 
+	margin-bottom: 37px;
+}
+.bannCon .banLeft .banList li span{
+	font-family: "宋体";
+	margin-top: 5px;
+	color: #555555;
+	display: block;
+	width: 5px;
+	height: 5px;
+	float: right;
+	/* background-color: palevioletred; */
+	
+}
+.bannCon .banLeft .banList li a{
+	color: #555555; 
+	padding: 0 13px 0 13px;
+	padding: 8px;
+}
+.bannCon .banLeft .banList li a:first-child{
+	font-size: 17px;
+	padding: 0px;
+}
+
+.bannCon .banRight{
+	position: relative;
+	width: 840px;
+	height: 430px;   
+	/* background: yellowgreen; */
+}
+.bannCon .banRight .banImgBox{
+	width: 840px;
+	height: 347px;
+}
+.bannCon .banRight .banImgBox .banImg{
+	width: 100%;
+	height: 100%;
+}
+.bannCon .banRight span{
+	position: absolute;
+	top: 50%;
+	margin-top: -17px;
+	width: 22px;
+	height: 14px;
+	/* background:red; */
+	font-size: 34px;
+	color: #757478;
+	font-family: "宋体";
+	display: none;
+	font-weight: bold;
+}
+.bannCon .banRight:hover span{
+	display: block;
+}
+.bannCon .banRight span.btnLeft{
+	right: 20px;
+}
+.bannCon .banRight span.btnRight{
+	left: 20px;
+}
+
+
+/*content part*/
+.content .line1{
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.content .lineTop{
+	height: 118px;
+	/* background: pink; */
+}
+.content .lineTop .top1{
+	height: 53px;
+	line-height: 53PX;
+	border-bottom: 1px solid #EBEBEB;
+}
+.content .lineTop .top1 .hotBtn{
+	border-bottom: 2px solid #000;
+	padding-bottom: 15px; 
+	margin-right: 60px;
+}
+.content .lineTop .top1 .newBtn{
+	color: #999999;
+}
+.content .lineTop .top2{
+	height: 42px; /*padding-top=20了之后,66-24 = 42*/
+	/* line-height: 66px; */
+	padding-top: 24px;
+	font-size: 12px;
+}
+.content .lineTop .top2 span{
+	/* margin-top: 42px; */ /*66/2-9*/
+	width: 18px;
+	height: 18px;
+	background: #e6e6e6;
+	color: #fff;
+	text-align: center;
+	border-radius: 50%;
+	margin-right: 14px;
+}
+.content .lineTop .top2 a:nth-of-type(1){
+	color: #999999;
+	margin-right: 55px;
+}
+.content .lineTop .top2 a:nth-of-type(2){
+	color: #00B38A;
+}
+.content .line1 .conUl{ 
+	/* background: skyblue; */
+	height: 1px;
+}
+.content .line1 .conUl li{
+	margin-bottom: 17px;
+}
+.content .line1 .conUl li .conBox{
+	width: 355px; /*289-34*/
+	/* height: 176px; */ /*200-24*/
+	border: 1px solid #EAEEED;
+	padding: 24px 16px 16px; /*这样左右会增加34*/
+}
+.content .line1 .conUl li .conBox .job{
+	font-size: 18px;
+}
+.content .line1 .conUl li .conBox .job .time{
+	color: #9999b2;
+	margin: 0 8px;
+}
+.content .line1 .conUl li .conBox .job img{
+	margin-top: 4px;
+}
+.content .line1 .conUl li .conBox .job .money{
+	font-size: 12px;
+	color: #fa6041;
+	margin-top: 5px;
+}
+.content .line1 .conUl li .conBox .btn{
+	font-size: 18px;
+	color: #9999b2;
+}
+.content .line1 .conUl li .conBox .btn2{
+	margin-top: 13px;
+	margin-bottom: 13px;
+}
+.content .line1 .conUl li .conBox .spa{
+	border: 1px solid #EAEEED;
+	padding: 8px 25px;
+	border-radius: 5px;
+	margin-right: 12px;
+	font-size: 12px;
+}
+.content .line1 .conUl li .conBox .pBor{
+	border-bottom: 1px dotted #EAEEED;
+	padding-bottom: 20px;
+}
+.content .line1 .conUl li .conBox .imgBox{
+	/* background-color: gold; */
+	padding-top: 18px;
+}
+.content .line1 .conUl li .conBox .imgBox img{
+	width: 40px;
+	height: 40px;
+	margin-right: 14px;
+}
+.content .line1 .conUl li .conBox .imgBox .imgTxt{
+	font-size: 12px;
+}
+.content .line1 .conUl li .conBox .imgBox .imgTxt .txt1{
+	color: #555555;
+	padding-bottom: 5px;
+}
+.content .line1 .conUl li .conBox .imgBox .imgTxt .txt2{
+	color: #999999;
+}
+.content .line1 .conUl li div:nth-of-type(2){
+	margin: 0 16px 0 17px; /*up right bottom left*/
+}
+
+.content .more{
+	width: 338px;
+	height: 42px;
+	border: 1px solid #00B38A;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 42px;
+}
+
+
+.content .line2 .con2Box .listBox{
+	width: 248px;
+	height: 244px;
+	border: 1px solid #eeeeee;
+	padding: 12px 20px; /*+padding 宽高要剪掉*/
+	text-align: center;  /*span 中的文字居中*/
+	margin: 0 8px;
+	margin-bottom: 16px;
+}
+.content .line2 .con2Box .listBox:nth-child(2n-1){
+	margin-left: 0px;
+}
+.content .line2 .con2Box .listBox:nth-child(4n){
+	margin-right: 0px;
+}
+
+.content .line2 .con2Box .listBox img{
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	margin-bottom: 16px;
+}
+.content .line2 .con2Box .listBox .txt1{
+	font-size: 12px;
+	color: #999999;
+	margin-top: 10px;
+	margin-bottom: 12px;
+}
+.content .line2 .con2Box .listBox .txt2{
+	font-size: 12px;
+	color: #555555;
+	white-space: nowrap; /*让文字不换行*/
+	overflow: hidden;
+	text-overflow: ellipsis; /*让超出文字隐藏变成省略号*/	
+	border-bottom: 1px dotted #EBEBEB;
+	padding-bottom: 16px;
+}
+.content .line2 .con2Box .listBox .listCon{
+	/* background: yellow; */
+	font-size: 12px;
+	color: #00B38A;
+	margin-top: 18px;
+}
+.content .line2 .con2Box .listBox .listCon p{
+	color: #00B38A;
+}
+.content .line2 .con2Box .listBox .listCon .box1{
+	width: 78px;
+	/* background: pink; */
+}
+.content .line2 .con2Box .listBox .listCon .box1:nth-child(2){
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	margin: 0 6px;
+}
+
+ 
+.content .line3{
+	margin-top: 40px;
+}
+.content .line3 .btnCon{
+	font-size: 12px;
+	padding-top: 30px;
+	color: #99a5c2;
+}
+.content .line3 .btnCon a{
+	color: #555555;
+	margin-right: 18px;
+}
+.content .line3 .btnCon .openTxt img{
+	 margin-top: 4px;
+	 margin-left: 4px;
+ }
+
+.footer{
+	border-top: 1px solid #ababab;
+	margin-top: 70px;
+}
+.footer .fooTop{
+	padding-top: 50px;
+	height: 236px; /*286-50*/
+	/* background: hotpink; */
+}
+.footer .fooTop .appBox{
+	margin-right: 130px;
+	border-right: 1px solid #E8E8E8;
+	width: 314px;
+	height: 170px;
+	/* background:red; */
+}
+.footer .fooTop .appBox .btnApp{
+	border: 1px solid #00B38A;
+	width: 180px;
+	height: 44px;
+	line-height: 44px;
+	/* text-align: center; */
+	margin-bottom: 17px;
+}
+.footer .fooTop .appBox .btnApp span{
+	float: left;
+	width: 12px;
+	height: 15px;
+	background: url(../img/sprite2.png) no-repeat;
+	margin-left: 38px;
+	margin-top: 14px;
+	margin-right: 8px;
+}
+.footer .fooTop .appBox .btnApp:nth-child(1) span{
+	background-position: -150px -220px;
+}
+.footer .fooTop .appBox .btnApp:nth-child(2) span{
+	background-position: -215px -54px;
+}
+.footer .fooTop .appBox .btnTxt{
+	color: #555555;
+	font-size: 12px;
+}
+.footer .fooTop .appBox .btnTxt img{
+	display: inline-block;
+	margin-right: 5px;
+}
+.footer .fooTop .appBox .btnTxt img:nth-child(2){
+	margin-left: 28px;
+}
+.footer .fooTop .dlCen{
+	margin: 0 170px;
+}
+.footer .fooTop dl dt{
+	font-size: 18px;
+	color: #555555;
+	margin-bottom: 26px;
+}
+.footer .fooTop dl dd{
+	font-size: 12px;
+	color: #555555;
+	height: 44px;
+	line-height: 44px;
+}
+.footer .fooBottom{
+	height: 100px;
+	background: #fafafa;
+}
+.footer .fooBottom .bottCon{
+	/* background: skyblue; */
+	height: 100px;
+	font-size: 12px;
+	color: #555555;
+	padding: 30px;
+}
+.footer .fooBottom .bottCon > p{
+	margin-top: 50px;
+	margin-right: 20px;
+}
+.footer .fooBottom .bottCon > p span{
+	background: url(../img/sprite2.png) no-repeat;
+}
+.footer .fooBottom .bottCon span{ 
+	width: 16px;
+	height: 16px;
+	background-position: -150px -184px;
+}
+.footer .fooBottom .bottCon .txtBox{
+	width: 186px;
+	height: 58px;
+	border: 1px solid #555555;
+	margin-top: 4px;
+}
+.footer .fooBottom .bottCon .txtBox span{
+	width: 20px;
+	height: 24px;
+	/* background-color: pink; */
+	background-position: -132px -20px;
+	margin-top: 18px;
+	margin-left: 20px;
+}
+.footer .fooBottom .bottCon p{
+	margin-top: 8px;
+	padding-left: 25px;
+}
+.footer .fooBottom .bottCon .imgBox{
+	margin-top: 10px;
+} 
+
+

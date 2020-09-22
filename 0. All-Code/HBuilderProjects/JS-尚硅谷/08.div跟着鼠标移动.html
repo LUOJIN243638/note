@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: #008000;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(event){
+				/* 使我们的div跟着鼠标移动 */
+				
+				//1, 获取box1
+				var box1 = document.getElementById("box1");
+				
+				document.onmousemove = function(event){
+					event = event || window.event;
+					 /* 4, 获取滚动条滚动的距离 谷歌认为时body的，但是火狐不是 
+					 认为时html的
+					 
+					 */
+					//var str = document.body.scrollTop;
+					var st = document.body.scrollTop || document.documentElement.scrollTop;
+					var sl = document.body.scrollLeft || document.documentElement.scrollLeft;
+					
+					// 2, 获取鼠标坐标 
+					var left = event.clientX;
+					var top = event.clientY;
+					
+					//3，设置div的偏移量,将div的位置和鼠标的设置一样就行了
+					// ***只对开启定位的元素起作用，一定要开启box1的绝对定位
+					box1.style.left = left + sl+ 'px'; 
+					box1.style.top = top + st + 'px';
+					
+					/* 哈哈 ，但是给div绑定事件后，鼠标移除div,就不走了
+					应该绑定给document,但是还有问题
+					
+					当页面高哦都很高时，滚动往下拉，鼠标也跟着往下
+					
+					clientX;获取当前窗口的坐标，总是相对于当前窗口
+					div相对于整个页面的
+					鼠标相对于当前页面的
+						- 产生了距离，正好是滚动的距离
+						- pageX 可以用来获取相对于整个页面的,IE8 x
+					*/
+				   
+				   
+					
+				}
+			}
+		</script>
+	</head>
+	<body style="height: 1000px; width: 1500px;">
+		<div id="box1">
+			
+		</div>
+	</body>
+</html>

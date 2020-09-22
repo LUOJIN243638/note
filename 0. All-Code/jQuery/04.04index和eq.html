@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+		/*
+	1,index() 查找兄弟节点的下标
+	2,eq(下标) 通过下标获取元素节点
+
+		*/
+   $(function(){
+   		alert($("h3").index()); //2
+   		$("li").eq(3).css("backgroundColor","red");
+   		$("li:eq(4)").css("backgroundColor","pink");
+   	}); 
+	</script> 
+</head>
+<body>
+<strong>strong	</strong>
+<em>em</em>
+<div id="div1">	
+	<h2>h2</h2>
+	<p>p</p>
+	<h3>h3</h3>
+	<em>em</em>
+	<div>div</div>
+</div>
+<ul>	
+	<li>	li</li>
+	<li>	li</li>
+	<li>	li</li>
+	<li>	li</li>
+	<li>	li</li>
+	<li>	li</li>
+</ul>
+
+
+</body>
+</html> 

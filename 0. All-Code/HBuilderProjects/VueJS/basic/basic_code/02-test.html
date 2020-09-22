@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--
+        1,引入vue.js
+        2,创建vue对象
+          el-指定根element选择器
+          data-初始化数据，页面可以访问
+        3，双向数据绑定： v- model
+           数据绑定-数据在页面与内存中的变量自动转移
+           双向数据绑定-如果2方向的数据都可以自动转移
+        4，显示数据：{{。。。}}
+        5，理解vue的mvvm实现
+        6, vue 浏览器插件
+
+        页面--- vm ------data
+
+         M =model ：模型=数据对象-data
+         V=view : 视图=模板页面
+         V M = viewModel ： 视图模型-vue的实例=vm
+
+          - 声明式开发：按照别人的语法去做一些声明的定义-不用管流程
+         命令式开发：jquery 绑定-读-监听...整个流程都要做
+
+         添加vue.js devtools-扩展程序
+         inspect - root:一个root代表一个vue对象
+
+     -->
+
+
+     <div id="app"> <!--view=V-->
+         <input type="text" v-model="username">
+        <p>Hello {{username}} </p>
+     </div>
+
+     <script type="text/javascript" src="../js/vue.js"></script>
+     <script>
+         //创建vue实例
+       const vm = new Vue({
+            //配置对象，
+           // element - #app选择器,要管理谁，
+           // 给谁+id，表明将表面那个元素交给vue
+            el: '#app',
+            //数据-model -M
+            data: {
+                username: 'atguigu!' //{{name}}在需要的地方调用
+            }
+        })
+
+     </script>
+
+</body>
+</html>

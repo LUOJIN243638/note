@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="009数组-tool.js"></script>
+</head>
+<body>
+	ownerDocument 属性 [注] 返回该节点的文档对象的根节点，返回的对象相当于document
+	parentNode previousSibling nextSibling 
+	<span></span> <div id="div1"></div> <p></p>
+
+	<div id="div2" title="hello" name="world" class="box"></div>
+
+	<script type="text/javascript">
+		/*属性节点：attribute属性返回该节点的属性节点集合
+		集合特点： 1，不重复  2， 无序（无法通过下标去访问）
+		attributes.length 返回节点的个数
+		*/
+		var div2=document.getElementById('div1');
+		alert(div2.attributes); //[object NamedNodeMap]
+		alert(div2.attributes.length);//
+		//访问其中一个属性节点
+		alert(div2.attributes.getNamedItem("id")) // object Attr
+		alert(div2.attributes["id"]) 
+
+		//访问它对应的属性 nodeName nodeType nodeValue 
+		alert(div2.attributes["id"].nodeName);
+
+
+
+
+		/*var div1=document.getElementById('div1');
+		alert(div1.ownerDocument == document); //true
+		alert(div1.parentNode.nodeName); //BODY
+
+		removeSpaceNode2(div1.parentNode);
+		alert(div1.previousSibling.nodeName); //#text 空白节点的问题 --SAPN */
+	</script>
+
+</body>
+</html>

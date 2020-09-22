@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 200px;height: 200px;background:red;}
+	</style>
+</head>
+<body>
+	<div id="test">aaa</div>
+	<script type="text/javascript">
+		var oDiv = document.getElementById('test');
+		oDiv.onclick = function(){
+			console.log(this.innerText); //aaa
+		}
+	   /*oDiv.onmouseover = function(){
+			console.log(this.innerText); //aaa
+		}*/
+		/*oDiv.onmousedown = function(){
+			console.log("mousedown!");
+		}*/
+		/*oDiv.onmouseup = function(){
+			console.log("onmouseup");
+		} */
+		//mousedown  mouseup onclick事件会在之后触发
+
+		HTML 事件：onload ,onsroll,onresize,表单元素，表单提交，onfocus....
+
+				
+	</script>
+	
+
+
+</body>
+</html>

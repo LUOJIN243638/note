@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 200px;height: 200px;background:red;}
+	</style>
+</head>
+<body>
+Event事件对象获取方式：e.clientX,e.clientY,e.pageX,e.offsetY
+	<div id="test">aaa</div>
+<script type="text/javascript">
+	var oDiv = document.getElementById('test');
+	oDiv.onclick = function(e){
+		var evt = e || window.event;
+		console.log(evt.clientX,evt.clientY); //147 132
+		console.log(evt.pageX,evt.pageY); //25 127  25 127
+		console.log(evt.offsetY);
+		//console.log(e); //但是在IE里边 不行
+		//console.log(window.event)  //IE
+
+	}
+</script>
+</body>
+</html>

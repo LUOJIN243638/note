@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [v-cloak]{
+            /* 属性选择器  找有v-cloak属性的选择器，和他匹配*/
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 指令
+        v-text 更新元素得 textContent
+        v-html 更新元素得innerHTML
+        v-if 如果俄日true 当前标签才会输出到页面
+        v-else  false得话，当前标签才会输出到页面
+        v-show  通过控制display样式来控制 显示 / 隐藏
+        v-for 遍历数组/对象
+        v-on 绑定事件监听 ，一n般简写为@
+        v-bind 强制绑定解析表达式，可以省略v-bing
+        v-model 双向数据绑定
+        ref 指定唯一标识，vue对象通过$els 属性访问这个元素对象
+        v-clock 防止闪现，与css配合：[v-cloak]{display:none}
+    -->
+    <div id="test">
+        <!-- button 想去提示p标签里得内容 -->
+        <p ref= "content">ahahahhaluojin</p>
+        <button @click = "hint">hint</button>
+
+
+        <!-- <p v-text= 'msg'></p> 有时打开回是 {{msg}} 用v-clock 防止闪现 -->
+        <p v-cloak>{{msg}}</p>
+    </div>
+     <script type="text/javascript" src="../js/vue.js"></script>
+     <script>
+         alert("----------------")
+         new Vue({
+             el: '#test',
+             data: {
+                msg: 'luojinhaha'
+            },
+            methods: {
+                hint () {
+                    alert(this.$refs.content.textContent)
+                }
+            }
+        })
+     </script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 以IE最高版本来兼容 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 引入bootstrap 样式文件 -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        /* col 开头的这些类 */
+        [class ^="col"] {
+            border: 1px solid #ccc;
+        }
+        .container .row:nth-child(1){
+            background-color: coral;
+        }
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <!-- row 必须放在container 里边 -->
+        <div class="row">
+            <!-- 一共12份，在大屏幕下 col-lg-3 ，每个盒子占3分，4个盒子*3=12分
+               在中等屏幕下，每个盒子占4份 col-md-4 =  每一行只能放3个
+               在小屏幕下，每个盒子占6份 col-sm-6 = 每一行只能放2个
+               超小屏幕下，每个盒子占12份 col-xs-12 = 每行只能放1个
+            -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">1</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">2</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">3</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">4</div>
+        </div>
+
+        <hr>
+        如果孩子的分数相加等于12， 则孩子沾满整个container的宽度
+
+        <div class="row">
+            <!-- 第二行：第一个孩子占6份，剩下了12-6=6 -->
+            <div class="col-lg-6">1</div>
+            <!-- 剩下3个孩子分6分，一个孩子占2分 -->
+            <div class="col-lg-2">2</div>
+            <div class="col-lg-2">3</div>
+            <div class="col-lg-2">4</div>
+        </div>
+
+        <hr>
+        如果孩子的分数相加小于12，？？会少一份，占不满整个container的宽度
+
+        <div class="row">
+            <!-- 第二行：第一个孩子占6份，剩下了12-6=6 -->
+            <div class="col-lg-6">1</div>
+            <div class="col-lg-2">2</div>
+            <div class="col-lg-2">3</div>
+            <div class="col-lg-1">4</div>
+        </div>
+
+        <hr>
+        如果孩子的分数相加大于12，？？会另起一行显示
+
+        <div class="row">
+            <!-- 第二行：第一个孩子占6份，剩下了12-6=6 -->
+            <div class="col-lg-6">1</div>
+            <div class="col-lg-2">2</div>
+            <div class="col-lg-2">3</div>
+            <div class="col-lg-3">4</div>
+        </div>
+    </div>
+</body>
+</html>

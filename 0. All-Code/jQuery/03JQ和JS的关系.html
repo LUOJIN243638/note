@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+
+    //可以共存，不能混用
+    //JQ底层是由面向对象封装的，既然是面向对象封装的，那我们获取到div节点后，这个div1节点本质就是一个jquery 对象
+
+    //通过构造函数构造的对象，可以通过调用这个构造函数来声明函数，也只能调用这个构造函数来声明函数
+   $(function(){
+
+    //像取来div1种的innnerHTML的话，千万不能用#div.innnerHtML,再JQ种识别不了innerHML
+
+    alert($("#div1").innerHTML); //undefined
+
+    alert($("#div1").html()); // div text
+  });
+
+	</script> 
+</head>
+<body>
+<div id="div1">
+  div text
+</div>
+</body>
+</html> 

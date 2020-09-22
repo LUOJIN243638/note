@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>06_IIEF</title>
+</head>
+<body>
+<!--
+1. 理解
+  * 全称: Immediately-Invoked Function Expression 立即调用函数表达式
+  * 别名: 匿名函数自调用
+2. 作用
+  * 隐藏内部实现，不暴露在外边
+  * 不污染外部命名空间
+  * 编写JS模块
+-->
+<script type="text/javascript">
+
+  //要不存起来 要不用起来 / 立即执行： 看成一个整体，调用
+  (function (i) {
+    var a = 4
+    function fn() {
+      console.log('fn ', i+a)
+    }
+    fn()
+  })(3)
+
+  var a =3; //也不会影响这个
+
+          (function(){
+            var a = 1
+            function test(){
+              console.log(++a)
+            }
+            //向外暴露一个全局函数 $是一个函数，执行后返回一个对象
+            window.$ = function () {
+              return {
+                test:test
+              }
+            }
+          })()
+
+          $().test()
+</script>
+
+</body>
+</html>

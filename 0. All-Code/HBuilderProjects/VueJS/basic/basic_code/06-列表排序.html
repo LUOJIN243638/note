@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_列表—过滤与渲染</title>
+</head>
+<body>
+    <!--
+        1, 列表过滤
+        2，列表排序
+
+     -->
+
+     <div id="test">
+         <input type="text" v-model="searchName">
+         <ul>
+             <li v-for = "(p,index) in filterPersons" :key = "index">
+                {{index}}---{{p.name}}---{{p.age}}
+             </li>
+         </ul>
+
+         <button @click  = "setOrderType(1)">年龄升序</button>
+         <button @click  = "setOrderType(2)">年龄降序</button>
+         <button @click  = "setOrderType(0)">原本顺序</button>
+     </div>
+     <script type="text/javascript" src="./js/vue.js"></script>
+     <script>
+         new Vue({
+             el: '#test',
+             data: {
+               searchName: '', //只要一输入，这个值就改变
+               orderType: 0, //0 原本顺序 1 升序 2降序
+               persons: [
+                   {name: 'Tom', age: 48},
+                   {name: 'Bob', age: 18},
+                   {name: 'Rose', age: 38},
+                   {name: 'Jack', age: 28},
+               ],
+             },
+             //计算属性
+             computed: {
+                 filterPersons() {
+                     //取出相关数据
+                     const {searchName, persons, orderType} = this
+
+                     //最终需要显示的数组
+                     let fPersons;
+
+                     //对persons进行过滤
+                     fPersons = persons.filter(p => p.name.indexOf(searchName)!==-1)
+
+                     //sort
+                     if(orderType!==0){
+                         fPersons.sort(function(p1,p2){
+                             //如果返回负数，P1在前，p1 - p2 = 负数，升序
+                             // 1,2 升序降序
+                             if(orderType === 2){
+                                 return p2.age - p1.age  //降序
+                             }else{
+                                 return p1.age - p2.age  //升序
+                             }
+                         })
+                     }
+                     return fPersons
+                 }
+             },
+             //定义排序方法
+             methods: {
+                 setOrderType(orderType){
+                     this.orderType = orderType
+                 }
+             }
+         })
+     </script>
+</body>
+</html>

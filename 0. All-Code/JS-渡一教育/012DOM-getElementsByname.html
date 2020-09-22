@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	/*document.getElementsByName()参数：name的值；返回值：符合条件的元素节点的数组
+	【注意】name属性一般情况，只有文本输入框的元素节点才有。
+	*/
+		window.onload-function(){
+			var nodes = docuemnt.getElementsByName('hello');
+			/*var oDiv = document.getElementById("div1");
+			var nodes = oDiv.getElementsByName("hello"); //获取不到的
+			alert("nodes.length");//object NodeList
+			*/
+		}
+	</script>
+</head>
+<body>
+<div name="hello"></div>
+<span name="hello"></span>
+<input name="name">
+<div id="div1"><span name="hello"></span></div>
+</body>
+</html>

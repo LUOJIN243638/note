@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*
+			判断一个书是不是素数？
+			常数：只能被1和它本身整除的数。
+
+			参数：一个数
+			返回值：是否是素数，布尔值
+
+		*/
+
+		function prime(num){
+			var isYes =  false;//是否是素数
+			
+			for(var i=2; i<num;i++){
+				if(num%i==0){
+					isYes=true; //如果有一次成功
+				}
+			}
+			return isYes;
+		}
+		alert(prime(5));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

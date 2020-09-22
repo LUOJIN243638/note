@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*
+ 			判断是不是闰年：
+ 			1，能被400整除
+ 			2，能被4整除但是不能被100整除
+ 			分析：
+ 			参数：年份（不确定的数）
+ 			返回值：是否是闰年？
+		*/
+
+		function Leapyear(year){
+			if(year% 400 == 0 || year % 4 == 0 && year % 100 !=0)
+			{
+				return true;
+			}else{
+				return false;
+			}	
+		}
+		alert(Leapyear(2000));
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 100px; height: 100px; background-color: red; position: absolute;}
+	</style>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+	 $(function() {
+	 	$("div").mousedown(function(ev){
+	 		var offsetX = ev.pageX - $(this).offset().left;
+	 		var offsetY = ev.pageY - $(this).offset().top;
+
+	 		//this当前按下的div
+	 		var _this = this;
+	 		$(document).mousemove(function(ev){
+	 			$(_this).css({
+	 				left: ev.pageX - offsetX,
+	 				top: ev.pageY - offsetY
+	 			})
+	 		})
+	 	})
+	 	$(document).mouseup(function(){
+	 		$(document).off("mousemove");
+	 	})
+	 })
+	</script>
+</head>
+<body>
+<div>	</div>
+<div>	</div>
+<div>	</div>
+<div>	</div>
+<div>	</div>
+</body>
+</html>

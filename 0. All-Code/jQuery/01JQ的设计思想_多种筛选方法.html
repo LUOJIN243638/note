@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	
+	<ul>
+		<li>11111</li>
+		<li class="box">11111</li>
+		<li>11111</li>
+		<li class="box">11111</li>
+		<li>11111</li>
+	</ul>
+	<span title="name"></span>
+	<div title="name">div</div>
+<script type="text/javascript">
+
+	//1,获取li种下表2的元素
+	//$("li:eq(2)").css("backgroundColor","red")
+	$("li").eq(2).css("backgroundColor","red")
+
+	//2,class = box变红色
+	//$("li.box").css("backgroundColor","pink")
+	$("li").filter(".box").css("backgroundColor","lightgreen")
+
+
+</script>
+
+</body>
+</html>

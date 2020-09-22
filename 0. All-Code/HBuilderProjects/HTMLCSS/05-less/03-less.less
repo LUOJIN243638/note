@@ -1,0 +1,47 @@
+.box1{
+    .box2{
+        color: red;
+    }
+
+    >box3{
+        color: green;
+        &:hover{
+            color: blue;
+        }
+    }
+
+    //box1:hover  1， &--外层的父元素
+    &:hover{
+        color: blue;
+    }
+
+    div &{
+        color: yellow;
+    }
+
+}
+
+.p1{
+    width: 100px;
+    height: 200px;
+}
+
+//2， extend() 选择器分组，对当前扩展指定选择器样式
+.p2:extend(.p1){
+    color: red;
+}
+
+.p3{
+    .p1(); //3，直接对p1的样式进行复制，= 混合，性能不是很好
+}
+
+//4, 使用类选择器可以在选择器后加一个括号，这时候就是创建了一个mixin混合函数
+//给别人用，自己不用
+.p4(){
+    width: 100px;
+    height: 200px;
+}
+
+.p5{
+    .p4();
+}

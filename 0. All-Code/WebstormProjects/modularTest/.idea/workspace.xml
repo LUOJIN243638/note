@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7c1c5552-6742-4560-b7b1-d8d75dcd422f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="modularTest" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Less File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1a7Mw8ZS9wHfcX79AfPflPRlDMF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/work2/gulp-test/src/css" />
+    <property name="list.type.of.created.stylesheet" value="Less" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="IntelliLang.Configuration" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\luojin\WebstormProjects\modularTest\work2\gulp-test\src\css" />
+      <recent name="C:\Users\luojin\WebstormProjects\modularTest\work2\gulp-test\src\js" />
+      <recent name="C:\Users\luojin\WebstormProjects\modularTest\work2\gulp-test" />
+      <recent name="C:\Users\luojin\WebstormProjects\modularTest\work2\gulp-test\src" />
+      <recent name="C:\Users\luojin\WebstormProjects\modularTest\work\06.ES6_Babel_Browserify\js\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\luojin\WebstormProjects\modularTest\work2\gulp-test\dist\js" />
+      <recent name="C:\Users\luojin\WebstormProjects\modularTest\work2\gulp-test" />
+      <recent name="C:\Users\luojin\WebstormProjects\modularTest\work2" />
+      <recent name="C:\Users\luojin\WebstormProjects\modularTest\work2\gulp-test\src" />
+      <recent name="C:\Users\luojin\WebstormProjects\modularTest" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html (1)">
+    <configuration name="index2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/modularTest/work/04.AMD-RequireJS/02_RequireJS/index2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/modularTest/work2/gulp-test/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/modularTest/work/06.ES6_Babel_Browserify/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/work/06.ES6_Babel_Browserify/js/src/main.js" working-dir="$PROJECT_DIR$/work/06.ES6_Babel_Browserify/js/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="require.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/work/01.JSmodular/04.AMD-RequireJS/02_RequireJS/js/libs/require.js" working-dir="$PROJECT_DIR$/work/01.JSmodular/04.AMD-RequireJS/02_RequireJS/js/libs">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.main.js" />
+        <item itemvalue="JavaScript Debug.index2.html" />
+        <item itemvalue="Node.js.require.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c1c5552-6742-4560-b7b1-d8d75dcd422f" name="Default Changelist" comment="" />
+      <created>1586082414388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586082414388</updated>
+      <workItem from="1586082415839" duration="232000" />
+      <workItem from="1586082685401" duration="2711000" />
+      <workItem from="1586152645943" duration="9215000" />
+      <workItem from="1586263685825" duration="1061000" />
+      <workItem from="1586304767801" duration="16810000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="550" y="45" key="#Notifications" timestamp="1586155728485">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="550" y="45" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1586155728485" />
+    <state x="664" y="156" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586304874141">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="664" y="156" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1586304874141" />
+    <state x="767" y="147" key="FileChooserDialogImpl" timestamp="1586082646401">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="767" y="147" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586082646401" />
+    <state width="749" height="165" key="GridCell.Tab.0.bottom" timestamp="1586159731333">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="749" height="165" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586159731333" />
+    <state width="749" height="165" key="GridCell.Tab.0.center" timestamp="1586159731332">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="749" height="165" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586159731332" />
+    <state width="749" height="165" key="GridCell.Tab.0.left" timestamp="1586159731332">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="749" height="165" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586159731332" />
+    <state width="749" height="165" key="GridCell.Tab.0.right" timestamp="1586159731333">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="749" height="165" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586159731333" />
+    <state x="0" y="4" width="916" height="716" key="SettingsEditor" timestamp="1586308257896">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="4" width="916" height="716" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586308257896" />
+    <state x="550" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586085472227">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="550" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1586085472227" />
+    <state x="279" y="0" width="633" height="728" key="find.popup" timestamp="1586305176929">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="279" y="0" width="633" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586305176929" />
+    <state x="693" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586327676666">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="693" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586327676666" />
+  </component>
+</project>

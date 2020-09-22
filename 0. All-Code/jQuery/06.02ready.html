@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		/*
+		ready() 事件
+		
+		window 代表浏览器的整个窗口 包含内容很多
+		document > window加载速度
+		*/
+		window.onload = function(){
+			alert("im onload");
+		}
+
+		$(function () {
+			//相当于window.onlaad()
+			alert(1);
+		})
+		 $(document).ready(function(){
+		 	alert(2);
+		 })
+	</script>
+</head>
+<body>
+
+</body>  
+</html>

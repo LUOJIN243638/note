@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 进入过程得动画 */
+    .bounce-enter-active {
+        animation: bounce-in .5s;
+        }
+    .bounce-leave-active {
+        /* 反过来 */
+         animation: bounce-in .5s reverse;
+    }
+    /* 具体得动画 */
+    @keyframes bounce-in {
+    0% {
+        /* sencond分成三份 ，缩小 */
+        transform: scale(0);
+    }
+    50% {
+        /* 放大 */
+        transform: scale(1.5);
+    }
+    100% {
+        /* 显示为原始大小 */
+        transform: scale(1);
+    }
+    }
+
+    </style>
+</head>
+<body>
+    <div id="example-2">
+        <button @click="show = !show">Toggle show</button>
+        <transition name="bounce">
+          <p v-if="show">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </transition>
+      </div>
+
+
+     <script type="text/javascript" src="../js/vue.js"></script>
+     <script>
+
+         new Vue({
+             el: '#example-2',
+             data: {
+                 show: true
+            }
+        })
+     </script>
+
+</body>
+</html>

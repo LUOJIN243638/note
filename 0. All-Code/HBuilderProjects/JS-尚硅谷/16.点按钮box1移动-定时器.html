@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0; padding: 0;}
+			#box1{width: 100px; height: 100px;
+			background: red;position: absolute;
+			left: 0; margin-top: 50px;}
+		</style>
+		<script src="./tools.js" type="text/javascript">
+			
+		</script>
+	</head>
+	<body>
+		
+		<!-- 
+		 点击按钮，一直往右走
+		 -->
+		 <button type="button" id="btn01">go right</button>
+		<div id="box1"></div>
+		<div id="" style="width: 0; height: 1000px; border-left:1px solid #8B0000; position: absolute; left: 500px; top: 0;">
+			
+		</div>
+		
+		<script>
+			var btn01 = document.getElementById("btn01");
+			var box1 = document.getElementById("box1");
+			var timer; //没有赋值，undefined,会不会有问题，没问题
+			
+			
+			// 点击按钮，left增大,定时器，获取box1的原来left值，在其基础上增加
+			btn01.onclick = function(){ 
+				//【解决问题2： 在每次开启定时器的时候，把之前的定时关了】
+				clearInterval(timer);
+				
+				timer = setInterval(function(){
+					var oldValue = parseInt(getStyle(box1,"left"));
+					var newValue = oldValue + 5;
+					//【解决问题2：】判断新的值是不是 》500
+					if(newValue > 500){
+						newValue = 500;
+					}
+					 
+					/*【 1，问题】+10 总能加到500， 但是+11，不会加到500 就不会停  
+						【2，问题】 +会越来越高，要关闭上一个定时器
+					*/
+					box1.style.left = newValue + 'px';
+					
+					if(newValue == 500){
+						clearInterval(timer);
+					}
+				},30)
+			}
+			
+			
+		</script>
+	</body>
+</html>

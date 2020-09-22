@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+2,解析赋值:按照一定的模式，从数组和对象中提取值，对变量进行赋值。
+数组：let[a,b,c] = [1,2,3];
+默认赋值：[a,b=2]=[3]; let c; [a=3]=[c];
+对象：
+let{a,b} = {a:"aaa",b:"bbb"};
+let{a:b} = {a:"aaa"}
+let{a,b = 5} = {a,1}
+<script type="text/javascript">
+	let[a,b,c] = [1,2,3];
+	console.log(a,b,c); //1 2 3
+
+	[a = 3,b]=[2]; 
+	console.log(a,b); //2 undefined
+
+	let c; 
+	let [a=3] = [c];
+	console.log(a); //3
+
+	let{a,b} = {a:"111",b:"2222"}; 
+	console.log(a,b); //111 222
+
+	let{a:b} = {a:"1111"}
+	console.log(a); //1111
+
+	let{a,b = 5} = {a,1} 
+	console(a,b); //1 5
+
+
+</script>
+
+</body>
+</html>

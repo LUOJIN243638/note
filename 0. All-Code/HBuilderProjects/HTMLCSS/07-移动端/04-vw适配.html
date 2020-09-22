@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        html{
+            /* 12px默认字体，不能设置比他小的，
+            如果比他小，则自动设置12px
+            */
+            font-size: 5.3333333333vw;
+
+            /* 0.13333333333S = 1px; 
+            5.333333vw = 40px;
+
+            rem 
+            1 rem = 1html
+            1rem = 40px(设计图)
+            */
+
+        }
+        .box1{
+            width: 1.2rem; 
+            height: 0.875rem;
+            background-color: rebeccapurple;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        设计图：
+        width:750px; / 1125px; 375的倍数都是
+        750px = 100vw
+        1px = 0.13333333333Svm
+        48 X 35?
+        48px = 6.4vw
+        35px = 4.667vw
+
+        简单方式换算：
+        1em = 1font-size
+        1rem = 1html的字体大小
+    -->
+    <div class="box1">
+    </div>
+</body>
+</html>

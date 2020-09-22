@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS 金山打字游戏</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			background-image: url("C:\\Users\\luojin\\Pictures\\Saved Pictures\\33.jpg");
+		}
+		#box li{
+			list-style: none;
+			font-size: 100px;
+			color:red;
+		}
+		/*确定位置便于下降*/
+		#box{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+	</style>
+
+</head>
+<body>
+<ul id="box">
+	<li></li>
+	<li>A</li>
+</ul>
+
+<script type="text/javascript">
+	var p = document.getElementById('p');
+	var new_box = document.getElementById('new_box')
+	var box=document.getElementById("box");
+        var all='ABCDEFGHIJQLMEOPQRSTUVWXYZ';
+        window.onkeydown=function(e){
+//       	获得兼容性对象
+            var ev=window.event||e;
+//          获得按下的按键并转换为对应按键
+            var key=String.fromCharCode(ev.keyCode);
+            var list=document.getElementById("box").getElementsByTagName('li');
+//             循环li标签,将按键与标签内容进行对比
+               for(var i=0;i<list.length;i++){
+//              	内容对比,内容相同则删除页面上显示的字母
+                    if(list[i].innerHTML==key){
+                    	box.removeChild(list[i]);
+                    var p_old_top=box.offsetTop;
+            	    var p_new_top=p_old_top-150;
+            	    box.style.top=p_new_top+"px";
+            	    var left=Math.floor(Math.random()*(1000-1+1-0)+0);
+            	    box.style.left=left+"px";
+                    var num=Math.floor(Math.random()*(all.length-1+1-0)+0);
+//                  将随机字母加入li中                    
+                    var new_list=document.createElement('li');
+//                  给新li进行赋值
+                    new_list.innerHTML=all[num];
+//                  将新li加入ul中
+                    box.appendChild(new_list);
+                    }
+                }
+                
+            }
+            
+//          定时器保证下落速度
+            var time=setInterval(function(){
+//          	获取ul的老位置
+				var old_top=box.offsetTop;
+//				计算ul的新位置
+                var new_top=old_top+2;
+//              将新值赋值回去
+                box.style.top=new_top+"px";
+            },15)
+            
+</script>
+
+</body>
+</html>

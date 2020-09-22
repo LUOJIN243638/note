@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 500px;height: 500px;border: 1px solid red;}
+		span{position: absolute;bottom: 0;}
+	</style>
+</head>
+<body>
+	<div id="test">
+		<span></span> 
+	</div>
+	<script type="text/javascript">
+		//鼠标移入显示坐标，移出取消
+		var oDiv = document.getElementById('test');
+		var oSpan = oDiv.children[0];
+		oDiv.onmousemove = function(e){
+		  	var evt = e || window.event;
+		  	var x = evt.clientX;
+		  	var y = evt.clientY;
+		  	oSpan.innerHTML = x+"," + y + "px"; }
+		oDiv.onmouseout = function(){ oSpan.innerHTML = "";}
+	</script>
+
+</body>
+</html>

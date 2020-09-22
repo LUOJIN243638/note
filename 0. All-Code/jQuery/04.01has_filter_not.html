@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+	/*1,filter 过滤 对已经获取的网页元素
+	 2,not 	
+	 3,has 直接判定它的子节点是否有符合条件的元素*/
+   $(function(){
+   		$("div").css("backgroundColor","red");
+  	 //将所有div背景设置为红色
+   		$("div").filter(".box").css("backgroundColor","blue"); // 1，让div下class=“box"变成蓝色;在已经获取的div种找到class=box的节点变色
+   		$("div").not(".box").css("backgroundColor","green");
+   		//2，filter的反义词
+   		$("div").has(".box").css("backgroundColor","orange");//找到子节点中是否有class=box的节点
+
+   	}); 
+
+
+	</script>
+</head>
+<body>
+	<div class="box">div1</div>
+	<div>div2<strong class="box">strong</strong></div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_列表—过滤与渲染</title>
+</head>
+<body>
+    <!--
+        1, 列表过滤
+        2，列表排序
+
+     -->
+
+     <div id="test">
+         <input type="text" v-model="searchName">
+         <ul>
+             <li v-for = "(p,index) in filterPersons" :key = "index">
+                {{index}}---{{p.name}}---{{p.age}}
+             </li>
+         </ul>
+
+         <button>年龄升序</button>
+         <button>年龄降序</button>
+         <button>原本顺序</button>
+     </div>
+     <script type="text/javascript" src="./js/vue.js"></script>
+     <script>
+         new Vue({
+             el: '#test',
+             data: {
+               searchName: '', //只要一输入，这个值就改变
+               persons: [
+                   {name: 'Tom', age: 48},
+                   {name: 'Bob', age: 18},
+                   {name: 'Rose', age: 38},
+                   {name: 'Jack', age: 28},
+               ],
+             },
+             //计算属性，你不知道要用到计算属性？
+             computed: {
+                 filterPersons() {
+                     //取出相关数据，返回的结果和那些数据有关，结构赋值
+                     const {searchName, persons} = this
+
+                     //最终需要显示的数组
+                     let fPersons;
+
+                     //对persons进行过滤，filter（箭头函数，返回布尔类型的值
+                     // 看p.name有没有包含 search.name
+                     //indexOf 当前下标有没有，子串在大串里出现的下标，没有就返回-1
+                     fPersons = persons.filter(p => p.name.indexOf(searchName)!==-1)
+
+                     return fPersons
+                 }
+             }
+         })
+     </script>
+</body>
+</html>

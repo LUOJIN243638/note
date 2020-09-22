@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload= function(){
+				/* 为每一超链接绑定一个单机函数,这里为每个连接绑定单机函数 
+				但是这些只能为现有的连接绑定，新加的没有，必须重新绑定，麻烦啊
+				*/
+				
+				//3, 点按钮添加超链接
+				var btn01 = document.getElementById("btn01");
+				btn01.onclick = function(){
+					//4,创建<li></li>
+					var li = document.createElement("li");
+					li.innerHTML = "<a href='javascript:;' class="link">>new link</a>"
+					//5, 将li加到ul
+					ul.appendChild(li);
+				
+				}
+				
+				
+				//1，获取所有的 超链接<a href=""></a>
+				var allA = document.getElementsByTagName("a");			
+				//2,遍历
+				// for(var i = 0; i < allA.length; i++){
+				// 	allA[i].onclick = function(){
+						
+				// 	}
+				
+				/*6，我们希望绑定一次 用到所有的上，即使是后添加的，
+				试着帮给共同的父元素,= 事件委派
+				将时间同意绑定给共同的祖先元素
+					- 利用了事件冒泡，减少绑定次数，提高性能
+				*/
+				ul.onclick = function(){
+					
+					//alert(this); //this是绑定的那个对象，给谁绑定的就是水
+					event = event || window.event;
+					
+					// target 点谁就是谁 event中target表示出发时间的对象
+					//alert(event.target);
+					
+					// 如果触发事件时期望的元素，否则就不执行
+					if(event.target.className == "link"){
+						alert("hahaha 我是uL中的响应函数")
+					}
+				}
+				
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 事件委派 -->
+		<button type="button" id="btn01">add new link</button>
+		<ul id="ul">
+			<li><a href="javascript:;" class="link">link1</a></li>
+			<li><a href="javascript:;" class="link">>link2</a></li>
+			<li><a href="javascript:;" class="link">>link3</a></li>
+		</ul>
+	</body>
+</html>

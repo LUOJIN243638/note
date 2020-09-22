@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+   $(function(){
+  		/* JS : innerHTML 如果像获取div和input种value的内容 
+      value */
+
+      o = $("#div1").html();
+      alert(o)
+
+      //赋值的时候
+      $("#div1").html("<h2>im a new content</h2>")
+
+      //value
+      alert($("input").val());
+      $("input").val("hahahaha")
+  });
+
+	</script>
+</head>
+<body>
+<div id="div1">
+  <em>em</em>
+  div text
+</div>
+<input type="text" value="helloworld">
+</body>
+</html> 

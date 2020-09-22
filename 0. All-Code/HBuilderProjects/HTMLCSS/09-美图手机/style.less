@@ -1,0 +1,191 @@
+a{
+    text-decoration: none;
+    color: #fff;
+    &:hover{
+        color: rgb(197, 196, 196);
+    }
+}
+.top-bar-wrapper{
+    background-color: #000000;
+}
+
+// navigation
+.top-bar{
+    width: 1200px;
+    margin: 0 auto;
+    height: 48px;
+    background-color: #000000;
+    padding: 0 14px;
+     //设置一个弹性盒
+    display: flex; 
+    //垂直居中
+    align-items: center;
+    //距离拉开
+    justify-content: space-between;
+}
+
+// left navigation
+.left-menu{
+    &:active{
+        .nav{
+            display: block;
+        }
+    }
+
+
+    //设置menu
+    // position: relative;
+    .nav{
+        display: none;
+        position: absolute;
+        top: 48px;
+        background-color: #000000;
+        //撑满整个屏幕
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: 60px;
+
+        li{
+            width: 80%;
+            margin: 0 auto;
+            border-bottom: 1px solid #757474;
+
+            a{
+                display: block;
+                line-height: 44px;
+                font-size: 14px;
+
+            }
+
+            &:last-child a{
+                display: inline-block;
+                margin-right: 6px;
+
+            }
+
+            span{
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+
+
+    // 图标
+    .menu-icon{
+        width: 18px;
+        height: 48px;
+        position: relative;
+
+        // 3 lines of the nav
+        li{
+            width: 18px;
+            height: 1px;
+            background-color:#fff;
+            position: absolute;
+
+            //修改旋转的原点
+            transform-origin: left center;
+
+            transition:  0.5s;
+        }
+        li:nth-child(1){
+            top: 18px;
+
+            // 向下旋转 rotated dowm
+            // transform: rotateZ(40deg);
+        }
+        li:nth-child(2){
+            top: 24px;
+
+            //隐藏 
+            // visibility: hidden;
+           // opacity: 0;
+        }
+        li:nth-child(3){
+            top:30px;
+            
+            //向上旋转
+            // transform: rotateZ(-40deg);
+        }
+        
+        //鼠标一如以后的效果，正常时JS，点击后，这只是个替代的东西较low
+        &:active{
+            li:nth-child(1){
+    
+                // 向下旋转 rotated dowm
+                transform: rotateZ(40deg);
+            }
+            li:nth-child(2){
+    
+                //隐藏 
+                // visibility: hidden;
+               opacity: 0;
+            }
+            li:nth-child(3){
+                
+                //向上旋转
+                transform: rotateZ(-40deg);
+            }
+            
+
+        }
+
+    }
+}
+
+
+//logo
+.logo{
+    a{
+        text-indent: -99999px;
+        display: block;
+        width: 122px;
+        height: 32px;
+        //2北图 缩小一半
+        background-size: 400px 400px; 
+        background-image: url(./imgs/dff63979.sprites-index@2x.png);
+    }
+}
+
+//媒体查询
+@media only screen{
+    //断点,屏幕变大 位置发生变化
+    @media (min-width: 768px){
+        .left-menu{
+            order: 2;
+            //让他自动分配空间自己增长
+            flex: auto; 
+
+            //显示菜单
+            .nav{
+                display: flex;
+                position: static;
+                padding: 0;
+                justify-content: space-around;
+                li{
+                    margin: 0;
+                    width: auto;
+                    border-bottom: none;
+                    
+                    a{
+                        line-height: 48px;
+                    }
+
+                    span{
+                        display: none;
+                    }
+                }
+            }
+
+            //隐藏菜单图标
+            .menu-icon{
+                display: none;
+            }
+        
+        }
+        .logo{order: 1;}
+        .user-info{order: 3;}
+    }
+}

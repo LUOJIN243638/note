@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+1, let的使用：用来声明变量，他的用法类似于var，但所声明的变量，只在let命令所在代码块有效。
+存在块级作用域{}，不存在生声明提升，不允许重复声明（包括普通变量和函数变量），const的使用，用来声明常量，
+不要试图改变常量的值，其他语法参照let;
+<script type="text/javascript">
+	let a = 10;
+	console.log(a);
+	if (a > 5) { let b = 20;}
+		//console.log(b); //b is not defined
+	function foo(){
+		let c = 20
+	}
+	foo();
+	console.log(c); //c is not defined 是局部变量
+	console.log(a);
+	var a = 10; //undefined
+	console.log(b);
+	let b = 10; ////b is not defined
+
+	let a = 10; 
+	let a = 20; //不可以的 'a' has already been declared
+
+	const a = 10;
+	a = 20;  //Assignment to constant variable.
+</script>
+	2，解析赋值
+	3，模板字符串
+	4，箭头函数 Arrow Function
+	5, set结构和map函数
+	6，生成器函数
+	7，类class(了解)
+
+</body>
+</html>

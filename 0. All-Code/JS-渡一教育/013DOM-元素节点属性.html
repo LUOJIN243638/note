@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="div1"><em>xieti</em>text content<strong>bold</strong></div>
+<script type="text/javascript">
+	/*childNodes 获取当前元素节点的所有子节点-元素节点，文本节点*/
+	var div1 = document.getElementById('div1');
+	alert(div1.childNodes);  //返回节点列表[object NodeList]，装有当前元素的节点的所有子节点
+	alert(div1.childNodes.length); //3
+
+	//DOM的三种节点类型：元素节点 文本节点  属性节点 
+	//【注】 节点可以分为元素节点，属性节点和文本节点，而这些节点又有三个非常有用的属性，分别是 nodeName,nodeType,nodeValue
+
+	alert(div1.childNodes[0].nodeName);//EM
+	alert(div1.childNodes[0].nodeType);//1
+	alert(div1.childNodes[0].nodeValue);//null
+
+	alert(div1.childNodes[1].nodeName);//text
+	alert(div1.childNodes[1].nodeType);//3
+	alert(div1.childNodes[1].nodeValue);//文本内容
+
+	/firstChild 快速找到当前元素节点子节点的第一个 lastChild /
+
+	alert(div1.firstChild.nodeName);//EM
+	alert(div1.lastChild.nodeName); //strong
+
+	
+</script>
+
+
+
+
+</body>
+</html>

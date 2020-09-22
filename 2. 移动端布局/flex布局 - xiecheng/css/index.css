@@ -1,0 +1,376 @@
+body{
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei,hei;
+    color: #000000;
+    background: #f2f2f2;
+    /* 水平滚动条不要 */
+    overflow: hidden;
+    overflow-y: auto;
+    /* 防止点击之后，背景高亮显示 */
+    -webkit-tap-highlight-color: transparent;
+   
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #222222;
+}
+div{
+    box-sizing: border-box;
+}
+.search_index{
+    display: flex;
+    /* the fixed position is related to the screen, is not his father */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 999;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    /* the fixed box must have a width */
+    width: 100%;
+    height: 44px;
+    max-width: 540px;
+    min-width: 320px;
+
+    /* and if there is position attribute, margin: 0 auto; is not working! */
+
+    background-color: #f6f6f6;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.search{
+    position: relative;
+    height: 26px;
+    border: 1px solid #ccc;
+    margin: 7px 10px;
+    flex: 1;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #666666;
+    line-height: 26px;
+    padding-left: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
+.search::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    /* margin: 5px; */
+    /* background-color: royalblue; */
+    background: url(../images/search.png) no-repeat;
+    background-size: contain;
+    /* background: url(../images/search.png) no-repeat; */
+}
+.user{ 
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    line-height: 44px;
+    color: teal;
+}
+
+/* go back  */
+.goBack{
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 38px;
+    height: 38px;
+    background: url(../images/back.png) no-repeat;
+    background-size: 38px 38px;
+}
+
+
+/* focus */
+.focus{
+    /* 子绝父像 */
+    position: relative; 
+    padding-top: 44px;
+    overflow: hidden;
+}
+.focus img{
+    width: 100%;
+    /* height: 100%; */
+}
+.focus ul {
+    /* ul 没有 height , 他又有浮动，清除浮动 overflow:hidden  */
+    overflow: hidden;
+    width: 500%;
+    /* 刚开始 不要让他看到我们加的第三张图片，而是第一张 */
+    margin-left: -100%;
+}
+.focus ul li {
+    float: left;
+    width: 20%;
+}
+.focus ol{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    /* ol 有默认的外边距 */
+    margin: 0; 
+}
+.focus ol li{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    list-style: none;
+    border-radius: 3px;
+    /* 过度的效果，慢慢的变 */
+    transition: all .3s;
+}
+.focus ol li.current {
+    width: 13px;
+}
+
+
+
+.local_nav{
+    display: flex;
+    height: 64px;
+    background-color: #fff;
+    margin: 3px 4px;
+    border-radius: 8px;
+}
+
+/* navigation */
+.local_nav li{
+    flex: 1;
+}
+
+.local_nav a{
+    display: flex;
+    flex-direction: column;
+    /* 侧轴剧中对其,因为是单行*/
+    align-items: center;
+    font-size: 12px;
+}
+
+.local_nav li [class^="local_nav_icon"]{
+    width: 32px;
+    height: 32px;
+    background-color: royalblue;
+    margin-top: 8px;  
+    background: url(../images/books.png) no-repeat 0 0;
+    background-size: contain;
+}
+.local_nav li .local_nav_icon_icon2{
+    background: url(../images/clothes.png) no-repeat 0 0;
+    background-size: contain;
+}
+.local_nav li .local_nav_icon_icon3{
+    background: url(../images/elec.png) no-repeat 0 0;
+    background-size: contain;
+}
+.local_nav li .local_nav_icon_icon4{
+    background: url(../images/food.png) no-repeat 0 0;
+    background-size: contain;
+}
+.local_nav li .local_nav_icon_icon5{
+    background: url(../images/call.png) no-repeat 0 0;
+    background-size: contain;
+}
+
+/* mian nav */
+nav{
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 0 4px 3px;
+}
+.nav_common{
+    /* give the father sets  display: flex; */
+    display: flex;
+    height: 88px;
+}
+.nav_common:nth-child(1){
+    background: -webkit-linear-gradient(left, rgb(190, 157, 176), rgb(134, 105, 122));
+}
+.nav_common:nth-child(2){
+    background: -webkit-linear-gradient(left, rgb(110, 119, 134), rgb(89, 123, 185));
+}
+.nav_common:nth-child(3){
+    background: -webkit-linear-gradient(left, rgb(99, 121, 106), rgb(38, 170, 175));
+}
+
+.nav_common:nth-child(2){
+    margin: 2px 0;
+}
+.nav_items{
+    /* 3 of the child = 1/3 */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.nav_items:nth-child(-n+2){
+    border-right: 1px solid #fff;
+}
+.nav_items a{
+    flex: 1;
+    text-align: center;
+    line-height: 44px;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+}
+.nav_items a:nth-child(1){
+    border-bottom: 1px solid #fff;
+}
+
+/* .nav_common div [class^="nav_items"]:nth-child(3) a{
+    border: 0;
+    background: url(../images/books2.png) no-repeat bottom center;
+    background-size: 40%;  
+} */
+
+.nav_items_items1 a{
+    border: 0;
+    background: url(../images/books2.png) no-repeat center bottom;
+    background-size: 40%; 
+}
+.nav_items_items2 a{
+    border: 0;
+    background: url(../images/shopping-cart2.png) no-repeat bottom center;
+    background-size: 40%;  
+}
+.nav_items_items3 a{
+    border: 0;
+    background: url(../images/second-hands4.png) no-repeat bottom center;
+    background-size: 40%;  
+}
+
+
+
+/* subnav_entry */
+.subnav_entry{
+    display: flex;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 0 4px;
+    /*  强制换行*/
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.subnav_entry li{ 
+    flex: 20%;
+}
+
+.subnav_entry a{
+    display: flex;
+    flex-direction: column;
+    /* 居中对齐 */
+    align-items: center;
+}
+/* .subnav_entry_icon{
+    width: 28px;
+    height: 28px;
+    background: url(../images/wifi.png) no-repeat;
+    background-size: 28px auto;
+    margin-top: 4px;
+} */
+.subnav_entry li [class^="subnav_entry_icon"]{
+    width: 28px;
+    height: 28px;
+    background: url(../images/wifi.png) no-repeat;
+    background-size: 28px auto;
+    margin-top: 4px;
+}
+.subnav_entry li .subnav_entry_icon_icon1{
+    background: url(../images/call.png) no-repeat;
+    background-size: 28px auto;
+}
+.subnav_entry li .subnav_entry_icon_icon2{
+    background: url(../images/clothes.png) no-repeat;
+    background-size: 28px auto;
+}
+.subnav_entry li .subnav_entry_icon_icon3{
+    background: url(../images/elec.png) no-repeat;
+    background-size: 28px auto;
+}
+.subnav_entry li .subnav_entry_icon_icon4{
+    background: url(../images/suppies.png) no-repeat;
+    background-size: 28px auto;
+}
+.subnav_entry li .subnav_entry_icon_icon5{
+    background: url(../images/food.png) no-repeat;
+    background-size: 28px auto;
+}
+.subnav_entry li .subnav_entry_icon_icon6{
+    background: url(../images/help.png) no-repeat;
+    background-size: 28px auto;
+}
+.subnav_entry li .subnav_entry_icon_icon7{
+    background: url(../images/data.png) no-repeat;
+    background-size: 28px auto;
+}
+.subnav_entry li .subnav_entry_icon_icon8{
+    background: url(../images/plus.png) no-repeat;
+    background-size: 28px auto;
+}
+.subnav_entry li .subnav_entry_icon_icon9{
+    background: url(../images/more.png) no-repeat;
+    background-size: 28px auto;
+}
+
+/* sales_box */
+.sales_box{
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    margin: 4px;
+}
+.sales_hd{
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+}
+.sales_hd h3{
+    position: absolute;
+    color: rgb(110, 73, 73);
+    left: 8px;
+    line-height: 10px;
+}
+.sales_hd a{
+    position: absolute;
+    top: 10px;
+    right: 9px;
+    float: right;
+    font-weight: 700;
+    color: rgb(104, 27, 43);
+    border-radius: 20px;
+    background: -webkit-linear-gradient(left, rgb(207, 201, 201), rgb(143, 143, 195))
+}
+.rows{
+    display:flex;
+}
+.rows a{
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+.rows a:nth-child(1){
+    border-right: 1px solid #ccc;
+}
+.rows a img{
+    width: 100%;
+}
+
+.service{
+    display: flex;
+    height: 44px;
+    line-height: 44px;
+}
+.service .item{
+    flex: 1;
+    text-align: center;
+    color: #ccc;
+}

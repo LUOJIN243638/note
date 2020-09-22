@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 100px;height: 100px; background-color: orange;top: 300px;}
+		#div1{ position: absolute;}
+		#div2{background-color: blue;}
+		.box{background-color: green;}
+	</style>
+	<script src="jquery-ui.min.js"></script>
+	<script src="jquery-3.4.1.min.js"></script>
+	
+	<script type="text/javascript">
+		/*animate() 默认运动形式：慢快慢"swing"； 
+		匀速：linear 
+		引入JQ UI的框架*/
+
+		//有了JQ以后，addClass()和removeClass()就变成了增强版的方法
+		$(function () {
+			$("#div1").click(function(){
+			    /*$("#div1").animate({
+					width:300,
+					height:300,
+ 				},4000, "easeInOutElastic");
+ 				$("#div2").animate({ 
+ 					width:300,
+ 					height:300,
+ 				},4000)*/
+
+ 				/*$(this).animate({
+ 					top:500
+ 				},2000, "easeInOutQuart")
+			*/
+			})
+
+			$("button").eq(0).click(function(){
+				$("#div1").addClass("box",4000);
+			}) //加4000=渐渐变色
+			$("button").eq(1).click(function(){
+				$("#div1").removeClass("box",4000);
+			})
+		})
+	</script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+<button>添加class</button>
+<button>删除class</button>
+</body>  
+</html>

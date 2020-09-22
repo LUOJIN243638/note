@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#div1{width: 100px;height: 100px;background-color: red;border: 1px solid black; padding: 8px;}
+	</style>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+		/*
+		insertBefore()  before()
+		insertAfter()   after()
+		appendTo()  插在子节点末尾    append()  appendChild(类似JS，)
+		prependTo()  插在子节点首位  prepend()
+		remove()
+		*/
+
+   $(function(){
+   		// 1， 找到span节点插入到div的前边
+   		//$("span").insertBefore($("div"));
+
+   		//1.1对他链式操作 --操作的是sapn
+   		$("span").insertBefore($("div")).css("background-color","blue");
+
+   		//1.2找到span插入到divq前 = div前边是span
+   		//$("div").before($("span"));
+
+   		//1.20还想对他进行链式操作 --操作的是div
+   		$("div").before($("span")).css("background-color","blue")
+
+   		//2,找到div插入到span的后边
+   		//$("div").insertAfter($("span"));
+
+   		//3，找到span节点，插入到div节点的子节点的末尾
+   		//$("span").appendTo($("div"))
+
+   		//4，找到span节点，插入到div节点的子节点的首位
+   		//$("span").prependTo($("div"))
+
+   		//5,remove 删除div
+   		//$("div").remove();    
+
+
+
+   	}); 
+
+
+	</script>
+</head>
+<div id="div1"> <em>em</em>div文本 </div>
+<span>span</span>
+</body>
+</html>

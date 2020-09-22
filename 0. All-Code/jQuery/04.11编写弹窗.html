@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <style type="text/css">
+    *{margin: 0px; padding: 0px;}
+    #div1{width: 300px;height: 300px;border: 1px solid black; position: relative;display: none;}
+    #close{position: absolute;right: 0px;top: 0px;}
+  </style>
+  <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+
+   $(function(){
+    //计算剧中的top 和left
+    var top = $(window).scrollTop() + ($(window).height() - $("#div1").outerHeight(true))/2;
+    var left = ($(window).width() - $("#div1").outerWidth(true))/2;
+
+    $("#div1").css({
+      left: left,
+      top: top
+    })
+
+    //窗口变大变小也剧中
+    $(window).on("scroll resize",function(){
+       var top = $(window).scrollTop() + ($(window).height() - $("#div1").outerHeight(true))/2;
+       var left = ($(window).width() - $("#div1").outerWidth(true))/2;
+
+       $("#div1").css({
+          left: left,
+          top: top
+       })
+    })
+
+    $("#issue").click(function(){
+      $("#div1").css("display","block");
+    })
+
+    $("#close").click(function(){
+      $("#div1").css("display","none");
+    })
+  });
+
+	</script>  
+</head>
+<body style="height: 3000px">
+<button id="issue">发布</button>
+<div id="div1">
+  <input type="text" placeholder="用户名">
+  <input type="text" placeholder="密码">
+  <div id="close">X</div>
+</div>
+</body>
+</html> 

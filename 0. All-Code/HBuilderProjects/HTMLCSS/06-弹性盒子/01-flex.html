@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        ul{
+            width: 800px;
+            border: 10px solid red;
+            /* 设置为弹性容器 */
+            display: flex;  
+            /* 指定容器中弹性元素的排序方式：
+            column/ row /row reverse/column reverse
+            主轴：弹性元素排列方向 水平：自左向右。。
+            侧轴：与主轴垂直方向的轴
+            */
+            flex-direction: column;
+        }
+        li{
+            width: 200px;
+            height: 100px;
+            background-color: royalblue;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            /* float: left; //会塌陷 
+            弹性元素的属性：
+            1，flex-grow: 指定弹性元素伸展的系数，当父元素有剩余空间时
+            0 : 不伸展 1，2，3，
+            2，伸缩系数：flex-shrink:1;
+
+            
+
+            */
+            flex-grow: 0;
+        }
+        li:nth-child(2){
+            background-color: aqua
+        };
+        li:nth-child(3){
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <!-- flex: 弹性盒，伸缩盒，元素根页面大小改变
+    布局手段，主要用来代替浮动完成布局
+
+    弹性容器：
+        --要使用弹性盒，必须将元素设置为弹性容器
+        --display:flex(用得多)/inline-flex;
+
+    弹性元素：
+        --弹性容器的直接子元素自动是弹性元素
+        --一个元素可以同时是弹性容器和弹性元素
+    -->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+		/*
+		find 查找子节点
+		*/
+
+   $(function(){
+   		$("li").css("backgroundColor","blue"); 
+   		$("ul").find("li").css("backgroundColor","green");
+   		//=$("ul li")
+   		//但是不仅可以获取系节点，还可以获取class=box的节点
+   		$("ul").find("[name=hello]").css("backgroundColor","red");
+   	}); 
+	</script>
+</head>
+<body>
+	<ul>
+		<li class="box"></li>
+		<li name="hello">hello</li>
+		<li class="box"></li>
+	</ul>
+	<ol>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ol>
+</body>
+</html> 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0; padding: 0;}
+			#box1{width: 100px; height: 100px;
+			background: red;position: absolute;
+			left: 0; margin-top: 50px;}
+			#box2{width: 100px; height: 100px;
+			background: yellowgreen;position: absolute;
+			left: 0; top: 200px;}
+		</style>
+		<script src="./tools.js" type="text/javascript">
+			
+		</script>
+	</head>
+	<body>
+		
+		<!-- 
+		 点击按钮，一直往右走
+		 -->
+		 <button type="button" id="btn01">go right</button>
+		 <button type="button" id="btn02">go bottom</button>
+		 <button type="button" id="btn03"> box2 go bottom</button>
+		 <button type="button" id="btn04"> box2 go width</button>
+		 <button type="button" id="btn05"> box2 callback</button>
+		<div id="box1"></div>
+		<div id="box2"></div>
+		<div id="" style="width: 0; height: 1000px; border-left:1px solid #8B0000; position: absolute; left: 500px; top: 0;">
+		</div>
+		
+		
+		<script>
+			var btn01 = document.getElementById("btn01");
+			var btn02 = document.getElementById("btn02");
+			
+			var box1 = document.getElementById("box1");
+			var timer; 
+			
+			btn01.onclick = function(){ 
+				move(box1,"left",500, 20);
+			}
+			
+			btn02.onclick = function(){
+				move(box1, "bottom", 0, 10);
+			}
+			
+			//get btn03 
+			var btn03 = document.getElementById("btn03");
+			btn03.onclick = function(){
+				move(box2, "top", 500, 10);
+			}
+			//test
+			var btn04 = document.getElementById("btn04");
+			btn04.onclick = function(){
+				move(box2,"width", 500, 10);
+			}
+			var btn05 = document.getElementById("btn05");
+			btn05.onclick = function(){
+				move(box2,"width", 500, 30, function(){
+					move(box2, "height", 300, 10, function(){
+						move(box2,"top", 200, 10,function(){
+							alert("这里回调函数很重要")
+						});
+					});
+					alert("Run finished!");
+				});
+				
+			}
+			
+			
+		    /* 
+			5，简单动画的函数 
+			参数： 
+				- obj 要移动的动画对象
+				- attr: 要执行动画的样式上下左右
+				- target 执行动画目标位置
+				- speed 移动速度 
+				- callback 回调函数 在动画执行完毕后执行
+			*/
+				
+		</script>
+	</body>
+</html>

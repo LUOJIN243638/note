@@ -1,0 +1,30 @@
+//混合函数
+.test(@w,@h,@c){
+    //也可设置默认值
+    width: @w;
+    height: @h;
+    border: 1px solid @c;
+}
+div{
+    //@w没确定，所以要穿一个值,参数顺序要对，不能少一个
+    .test(200px, 200px,red); 
+    //.test(@w:200px, @h:200px,@c:red); 
+}
+
+span{
+    //对颜色取值
+    color: average(red,yellow);
+}
+
+html{
+    width: 100px;
+    height: 100px;
+}
+body{
+    width: 100px;
+    height: 100px;
+    color: greenyellow;
+}
+body:hover{
+    background-color: darken(greenyellow,50%);
+}

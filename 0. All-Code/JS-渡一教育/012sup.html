@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>这是父窗口</title>
+	<style type="text/css">
+		body{background-color: pink;}
+	</style>
+	<script type="text/javascript">
+		//当我点击按钮的时候，打开子窗口
+		window.onload=function(){
+			var oBtn=document.getElementById('btn');
+			oBtn.onclick=function(){
+				open("012sub.html","子窗口","width=400,height=400,top=200,left=200");
+			}
+		}
+	</script>
+</head>
+<body>
+<input type="button" value="button-打开子窗口" id="btn">
+</body>
+</html>

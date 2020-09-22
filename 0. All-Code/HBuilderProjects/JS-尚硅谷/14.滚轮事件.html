@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: #008000;
+			}
+		</style>
+		<script type="text/javascript" src="./tools.js">
+			
+		</script>
+		<script type="text/javascript">
+			window.onload = function(){
+				var box1 = document.getElementById("box1");
+				
+				//绑定鼠标滚轮事件 onmousewheel FF不认
+				//FF： DOMMouseScroll 需要通过addEventListener()函数来绑定
+				// function fun(){
+				// 	alert("滚了~~~~~")
+				// }
+				
+				box1.onmousewheel = function(event){
+					event = event || window.event;
+					//获取滚轮滚动的方向,event.WheelDelta只看正负不看大小 -120 120
+					//FF不支持 event.detail获取滚动方向 -3 3
+					//alert(event.WheelDelta);
+					
+					
+					//alert("滚了")
+					/* 当鼠标向下滚动时，box1边长，向上变短 */
+					
+					if(event.wheelDelta > 0 || event.detail < 0){
+						box1.style.height = box1.clientHeight - 10 + "px";
+					}else{
+						box1.style.height = box1.clientHeight + 10 + "px";
+					}
+					
+					/* 1, 当滚轮滚动时，如果浏览器由滚动条，滚动条会随之滚动
+					 这是浏览器的默认行为，如果不希望发生你可以取消默认行为*/
+					 
+					 
+					 /* 
+					 2, 当使用addEventListener() 方法绑定的函数，取消默认行为不能用
+					 return false; 这是FF 
+					 需要用event了
+					 */
+					
+					/* 3，但是 IE8不行了。 */				
+			        event.preventDefault && event.preventDefault();
+					return false;  
+				};
+				//FF
+				bind(box1, "DOMMouseScroll",box1.onmousewheel);
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box1"></div>
+	</body>
+</html>

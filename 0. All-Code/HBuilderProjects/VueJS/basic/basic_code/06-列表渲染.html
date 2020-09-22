@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <!--
+        1, 列表渲染
+            数组： v-for / index
+            对象： v-for / key
+        2，列表的更新显示
+            删除item
+            替换item
+
+     -->
+     <div id="demo">
+        <h2>测试： v-for 遍历数组</h2>
+        <!--以列表的形式显示 -->
+        <ul>
+            <!-- v-for 最好写一个key, index从文本变成表达式 ：-->
+            <li v-for = "(p,index) in persons" :key = "index">
+                <!-- 一个一个显示 -->
+                {{index}}----{{p.name}}----{p.age}
+                ---- <button @click = "deleteP(index)">delete</button>
+                ---- <button @click = "updateP(index, {name: 'haha', age: 50})">update</button>
+            </li>
+        </ul>
+
+
+        <h2>测试： v-for 遍历对象-了解一下，少用</h2>
+        <ul>
+            <!-- 显示第二个人的信息 -->
+            <li v-for = "(value,key) in persons[1]" :key = "key">
+                {{value}}----{{key}}
+            </li>
+        </ul>
+
+     </div>
+     <script type="text/javascript" src="../js/vue.js"></script>
+     <script>
+
+         new Vue({
+             el: '#demo',
+             data: {
+            // vue 本省只是监视了persons的改变，没有监视数据内部的改变
+            //vue重写了数组中一系列改变数组内部数据的方法（现调用原生，在更新界面）
+            //--->数组内部改变，界面自动变化
+
+            //人的列表{}=显示列表，需要数组型对的数据
+               persons: [
+                   {name: 'Tom', age: 48},
+                   {name: 'Bob', age: 18},
+                   {name: 'Rose', age: 38},
+                   {name: 'Jack', age: 28}
+               ]
+             },
+             //删除更新的回调函数
+             methods: {
+                 deleteP(index){
+                     this.persons.splice(index,1) //删persons中指定的index的p
+                 },
+
+                 updateP(index, newP){
+                    //这里并没有改变persons本身，改变内部的数据（变量所指向的内部的数据），
+                    //但并没有调用变异方法，vue不会更新界面
+                    //this.persons[index] = newP
+
+                     // 嗲用方法 让他知道，删除一个，换上新的
+                    this.persons.splice(index, 1 ,newP)
+
+                    //改变了persons = 直接赋值
+                   // this.persons = []
+                 }
+             }
+         })
+
+        //  ***数据绑定： 更新数据 ，界面就发生变化
+
+     </script>
+</body>
+</html>

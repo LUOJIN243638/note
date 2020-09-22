@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+/* 9，8，7，6，5，4 两两交换位置，大的在后，小的在前
+第一轮：
+ 9，8，7，6，5，4
+ 8，9，7，6，5，4
+ 8，7，9，6，5，4
+ 8，7，6，9，5，4
+ 8，7，6，5，9，4
+ 8，7，6，5，4，9
+第二轮：
+ 8，7，6，5，4
+ 7，8，6，5，4
+ 7，6，8，5，4
+ 7，6，5，8，4
+ 7，6，5，4，8
+第三轮：
+ 7，6，5，4
+ 6，7，5，4
+ 6，5，7，4
+ 6，5，4，7
+第四轮：
+ 6，5，4
+ 5，6，4
+ 5，4，6
+第五轮：
+ 5，4
+ 4，5
+*/
+/*var arr=[9,8,7,6,5,4];
+for (var i=0; i < arr.length; i++){ //比较得伦茨
+	for(var j = 0; j < arr.length-i-1; j++){ //每轮比较的次数
+		if(arr[j] < arr[j+1]){
+			var tmp = arr[j+1];
+			arr[j+1] = arr[j];
+			arr[j] = tmp;
+		}
+	}
+}
+alert(arr); */
+var arr=[9,8,7,6,5,4];
+function bubble(arr){
+for (var i=0; i < arr.length; i++){ //比较得伦茨
+	for(var j = 0; j < arr.length-i-1; j++){ //每轮比较的次数
+		if(arr[j] < arr[j+1]){
+			var tmp = arr[j+1];
+			arr[j+1] = arr[j];
+			arr[j] = tmp;
+		}
+	}
+}
+}
+bubble(arr)
+alert(arr)
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.b1{width: 100px; height: 100px; background: red;}
+			.b2{width: 200px; height: 200px; background: blueviolet;}
+		</style>
+	</head>
+	<body>
+		<!--  -->
+		<button type="button" id="btn01">修改box1样式</button><br><br>
+		<div id="box" class="b1"></div>
+		
+		<script>
+			var btn01 = document.getElementById("btn01");
+			var box1 = document.getElementById("box");
+			btn01.onclick = function(){
+				/* 
+					box.style.backgroundColor = "yellow";
+					这样每次修改一个样式，浏览器要重新渲染页面，
+					不方面写多个，性能差，JS Css耦合了
+					
+					修改class间接修改样式：
+						- 这样只需修改一次，就可修改多个样式
+						- 浏览器只需要渲染一次页面
+						- 表现，行为分离
+				 */
+				//修改box的class属性
+				//box.className += " b2";
+				// addClass(box, "b2");
+				// removeClass(box,"b2");
+				toggleClass(box, "b2");
+				//alert(hasClass(box,"b2"));
+			}
+			
+			/* 
+			6， 像一个函数中，添加指定的class类 
+			参数：
+				- obj
+				- cn 要添加的class
+			*/
+		   function addClass(obj, cn){
+			   if(!hasClass(obj, cn)){
+					obj.className += " " + cn; 
+				}
+		   };
+			
+			// 判断有没有cn,有就不加了
+		   function hasClass(obj, cn){
+			   //var reg = /\b2\b/;
+			   var reg = new RegExp("\\b"+cn+ "\\b");
+					 
+			   return reg.test(obj.className);
+		   };
+		   
+		   // 删除一个元素中指定的class
+		   function removeClass(obj, cn){
+				var reg = new RegExp("\\b"+cn+ "\\b");
+				
+				obj.className = obj.className.replace(reg,"");
+		   }
+		
+		  // 切换一个类
+		  function toggleClass(obj, cn){
+			  if(hasClass(obj, cn)){
+				  removeClass(obj, cn);
+			  }else{
+				  addClass(obj, cn);
+			  } 
+		  }
+		</script>
+	</body>
+</html>

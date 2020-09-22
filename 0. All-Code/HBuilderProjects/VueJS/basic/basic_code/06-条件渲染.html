@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!--
+       1,条件渲染指令 显示和隐藏对标签
+            v-if
+            v-else 这俩会移除标签
+            v-show 通过样式改变的 = display ="none"
+            特大的标签才可能会有差别
+       2,比较v-if/ v-show
+            如果需要频繁切换v-show 较好
+     -->
+     <div id="demo">
+         <p v-if = "ok">success</p>
+         <p v-else>fail</p>
+
+         <p v-show = "ok">表白成功</p>
+         <p v-show = "!ok">表白失败</p>
+
+         <button @click = "ok=!ok">Switch</button> // 点一下true / false
+     </div>
+     <script type="text/javascript" src="../js/vue.js"></script>
+     <script>
+         new Vue({
+             el: '#demo',
+             data: {
+                 ok: false
+             }
+         })
+     </script>
+</body>
+</html>

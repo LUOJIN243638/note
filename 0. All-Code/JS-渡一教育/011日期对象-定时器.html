@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*
+			定时器
+			setInterval(函数，毫秒数)；
+			功能：每隔多少毫秒，就调用一次函数
+			【返回值】：当前页面上对于这个定时器的唯一标识，定时器的ID
+
+			clearInterval() 取消定时器，参数就是定时器的ID
+
+		    setInterval(function(){
+		}，1000)
+
+			【问题】：当点击按钮时，启动一个定时器
+		*/
+
+		var i = 0;
+		/*function show(){
+			document.write(i++ +"<br/>");
+		} */
+		// 也可以写成这样
+		var show=function(){
+			document.write(i++ +"<br/>");
+		}
+		
+
+		window.onload = function(){
+			var oBtn = document.getElementById('btn'); //获取按钮
+			oBtn.onclick = function(){  
+			//当点击按钮的时候，启动这个定时器，让他执行show函数，每隔一秒执行一次
+			   //setInterval(show,1000)//函数传参
+			 
+				//也可以这样写
+			 	var timer = setInterval(function(){
+			 		document.write(i++ +"<br/>");
+			    		if (i == 5){
+			   			clearInterval(timer);
+			   		}},1000)
+			   alert(timer);        
+			}
+		}
+	</script>
+</head>
+<body>
+<input type="button" id= "btn" value="button">
+</body>
+</html>

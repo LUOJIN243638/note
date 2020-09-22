@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="18518af6-36a7-4b43-8eaf-220c11c2895e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZzLSWkjQfEdDo2e6iFZ5C9Sw1p" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/modularTest/work/04.AMD-RequireJS/01_NoAMD/js" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\luojin\WebstormProjects\node\modularTest\work\03.CommonJS-Browserify\js" />
+      <recent name="C:\Users\luojin\WebstormProjects\node" />
+      <recent name="C:\Users\luojin\WebstormProjects\node\03.mongoose" />
+      <recent name="C:\Users\luojin\WebstormProjects\node\02.文件系统" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\luojin\WebstormProjects\node\modularTest\work\04.AMD-RequireJS\01_NoAMD\js" />
+      <recent name="C:\Users\luojin\WebstormProjects\node\modularTest\work\04.AMD-RequireJS\02_RequireJS" />
+      <recent name="C:\Users\luojin\WebstormProjects\node\modularTest\work\04.AMD-RequireJS" />
+      <recent name="C:\Users\luojin\WebstormProjects\node\modularTest\work\03.CommonJS-Browserify\js\src" />
+      <recent name="C:\Users\luojin\WebstormProjects\node\modularTest\work" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.test1.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/node/modularTest/work/03.CommonJS-Browserify/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="test1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/node/modularTest/work/04.AMD-RequireJS/01_NoAMD/test1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="02.mongoose.demo.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/03.mongoose/02.mongoose.demo.js" working-dir="$PROJECT_DIR$/03.mongoose">
+      <method v="2" />
+    </configuration>
+    <configuration name="03.model.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/03.mongoose/03.model.js" working-dir="$PROJECT_DIR$/03.mongoose">
+      <method v="2" />
+    </configuration>
+    <configuration name="05.index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/03.mongoose/05.index.js" working-dir="$PROJECT_DIR$/03.mongoose">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.test1.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.05.index.js" />
+        <item itemvalue="Node.js.03.model.js" />
+        <item itemvalue="Node.js.02.mongoose.demo.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18518af6-36a7-4b43-8eaf-220c11c2895e" name="Default Changelist" comment="" />
+      <created>1585836976103</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585836976103</updated>
+      <workItem from="1585836979035" duration="62000" />
+      <workItem from="1585875619214" duration="19523000" />
+      <workItem from="1586001461975" duration="8714000" />
+      <workItem from="1586035810937" duration="10439000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="752" height="49" key="GridCell.Tab.0.bottom" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.0.center" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.0.left" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.0.right" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.1.bottom" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.1.center" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.1.left" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.1.right" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.2.bottom" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.2.center" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.2.left" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.2.right" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.3.bottom" timestamp="1586082413145">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586082413145" />
+    <state width="752" height="49" key="GridCell.Tab.3.center" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.3.left" timestamp="1586082413144">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1586082413144" />
+    <state width="752" height="49" key="GridCell.Tab.3.right" timestamp="1586082413145">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="752" height="49" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1586082413145" />
+    <state x="-234" y="0" width="998" height="708" key="SettingsEditor" timestamp="1586037742642">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-234" y="0" width="998" height="708" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586037742642" />
+    <state x="708" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586054893948">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="708" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586054893948" />
+  </component>
+</project>

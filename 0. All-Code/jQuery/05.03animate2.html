@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{width: 100px;height: 100px; background-color: orange;}
+		#div1{ position: absolute;top: 100px;}
+		#div2{background-color: blue;}
+		.box{background-color: green;}
+	</style>
+	<script src="jquery-3.4.1.min.js"></script>	
+	<script type="text/javascript">
+		//JQ 停止动画的函数 delay 延迟
+		$(function () {
+
+			//小技巧：为了保证动画马上触发,我们可以在每次调用animate之前先调用stop去关闭上一次定时器
+			/*$("#div1").hover(function(){
+				$(this).stop(true).animate({
+					width:300,
+					height:300
+				},2000)
+			},function(){
+				$(this).stop(true).animate({
+					width:100,
+					height:100
+				},2000)
+			})
+*/
+			$("#div1").click(function(){
+				$("#div1").animate({width:300},2000).delay(4000).animate({height:300},2000); 
+			})
+			//点div2停止1的动画
+			$("#div2").click(function(){
+				$("#div1").stop(); //停止第一个动画，当时后续的动画继续运行
+				//$("#div1").stop(true); //停所有的
+				//$("#div1").stop(true,true);//停所有， 并将正在运行的动画到达目的值
+				$("#div1").finish(); //停止所有，所有到达目的值
+			})
+		})
+	</script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>  
+</html>

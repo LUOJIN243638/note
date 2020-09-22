@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#div1{width: 100px;height: 100px;background-color: red;border: 1px solid black; padding: 8px;}
+	</style>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+
+	<script type="text/javascript">
+		/*width() innerWidt() outerWidth()获取当前div的宽
+		offsetWidth = width + border + padding
+		height() innerHeight() outerHeight() */
+
+   $(function(){
+   		//alert($("#div").css("width"));//字符串’100‘不好计算
+   		alert($("#div1").width()) //100
+   		alert($("#div1").innerWidth()) //116 = width +padding
+   		alert($("#div1").outerWidth()) //118 = width +border +padding
+   		alert($("#div1").outerWidth(true)) //158 = width +border +padding +margin
+
+   	}); 
+
+
+	</script>
+</head>
+<div id="div1" class="box1 box2">	div1</div>
+</body>
+</html>

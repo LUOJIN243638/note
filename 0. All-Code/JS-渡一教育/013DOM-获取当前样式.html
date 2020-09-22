@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#div1{background-color: red;width: 200px;}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oDiv=document.getElementById('div1');
+		//alert(oDiv.style.width)
+		//alert(oDiv.style.backgroundColor)
+		//1，【注意】通过上述操作，只能找到行间的CSS样式
+		/*2，获取当前有效样式 getComputedStyle(元素节点)【获取样式类型】 火狐，苹果，谷歌支持 
+		  3，IE下获取的方法：元素节点.currentStyle[获取样式类型]
+		*/ 
+		//alert(getComputedStyle(oDiv)["width"]) //200px
+		alert(getStyle(oDiv,"width"))  //200px
+	}
+	function getStyle(elem,attr){
+		return elem.currentStyle ? elem.currentStyle[attr]:getComputedStyle(elem)[attr];
+	}
+	</script>
+</head>
+<body>
+<div id="div1" style="height: 300px"></div>
+</body>
+</html>
